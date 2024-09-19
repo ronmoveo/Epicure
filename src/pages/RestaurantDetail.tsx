@@ -5,8 +5,6 @@ import './RestaurantDetail.scss'
 const RestaurantDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
 
-  // Fetch restaurant details based on id
-  // This is a placeholder, replace with actual data fetching logic
   const restaurant = {
     name: 'Claro',
     chef: 'Ran Shmueli',
