@@ -5,7 +5,6 @@ const RestaurantList: React.FC = () => {
   const restaurants = [
     { id: 1, name: 'Claro', chef: 'Ran Shmueli' },
     { id: 2, name: 'Lumia', chef: 'Meir Adoni' },
-    // Add more restaurants as needed
   ]
 
   return (
