@@ -1,10 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import './RestaurantDetail.scss'
 
 const RestaurantDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>()
 
+  
   const restaurant = {
     name: 'Claro',
     chef: 'Ran Shmueli',

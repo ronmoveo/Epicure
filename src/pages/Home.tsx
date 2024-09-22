@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Home.scss'
+import Hero
+ from '../components/Hero'
 const Home: React.FC = () => {
   return (
     <div className="home">
-      <h1>Epicure - Top Chef Restaurants in Tel Aviv</h1>
+      <Hero />
       <div className="search-bar">
         <input type="text" placeholder="Search for restaurant, cuisine, chef" />
       </div>

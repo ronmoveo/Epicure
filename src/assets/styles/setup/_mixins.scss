@@ -27,37 +27,48 @@ $screen-xl-min: 1200px;
   }
 }
 
-@mixin heading($size: 'large', $color: #333) {
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
+@mixin text($size: 'large', $color: #000000) {
+  font-family: 'Helvetica Neue', sans-serif;                                  
+  font-weight: 200;
   color: $color;
-
-  @if $size == 'large' {
-    font-size: 2rem;
-    line-height: 1.2;
-  } @else if $size == 'medium' {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  } @else {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
 }
 
-@mixin body-text($size: 'medium', $color: #333) {
-  font-family: 'Arial', sans-serif;
-  color: $color;
+@mixin icon-small() {
+  width: 20px;
+  height: 20px;
+}
 
-  @if $size == 'large' {
-    font-size: 1.2rem;
-    line-height: 1.5;
-  } @else if $size == 'medium' {
-    font-size: 1rem;
-    line-height: 1.6;
-  } @else {
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
+@mixin icon-size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin header-height($height: 46px) {
+  height: $height;
+}
+
+@mixin vertical-center($height: 46px) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin button($bg-color: transparent, $padding: 0) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-color;
+  border: none;
+  cursor: pointer;
+  padding: $padding;
+}
+
+@mixin body-text($color: #000000) {
+  font-family: Helvetica Neue;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 20px;
+  letter-spacing: 1.97px;
+  text-align: left;
 }
 
 @mixin flex-center {
