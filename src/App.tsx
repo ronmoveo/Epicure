@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import RestaurantList from './pages/RestaurantList'
 import RestaurantDetail from './pages/RestaurantDetail'
-import './App.scss'
 
 function App() {
   return (

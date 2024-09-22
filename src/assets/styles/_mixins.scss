@@ -1,8 +1,4 @@
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
-
+@import './variables';
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
     @content;
@@ -27,10 +23,10 @@ $screen-xl-min: 1200px;
   }
 }
 
-@mixin text($size: 'large', $color: #000000) {
-  font-family: 'Helvetica Neue', sans-serif;                                  
-  font-weight: 200;
-  color: $color;
+@mixin text() {
+  font-family: $primary-font;                               
+  font-weight: $primary-weight;
+  color: $primary-color;
 }
 
 @mixin icon-small() {
@@ -62,10 +58,11 @@ $screen-xl-min: 1200px;
   padding: $padding;
 }
 
-@mixin body-text($color: #000000) {
-  font-family: Helvetica Neue;
+@mixin body-text() {
+  color: $primary-color;
+  font-family: $primary-font;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: $primary-weight;
   line-height: 20px;
   letter-spacing: 1.97px;
   text-align: left;
@@ -77,25 +74,19 @@ $screen-xl-min: 1200px;
   align-items: center;
 }
 
-@mixin container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 
-@mixin button($bg-color: #007bff, $text-color: #fff) {
+@mixin button() {
   display: inline-block;
   padding: 10px 20px;
-  background-color: $bg-color;
-  color: $text-color;
+  background-color: transparent;
+  color: $primary-color;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: darken($bg-color, 10%);
+    background-color: darken(blue, 10%);
   }
 }
 

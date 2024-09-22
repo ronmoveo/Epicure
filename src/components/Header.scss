@@ -1,4 +1,4 @@
-@import '../assets/styles/setup/mixins';
+@import '../assets/styles/mixins';
 
 .header {
   background-color: #FFFFFF;
@@ -11,7 +11,7 @@
 
 
   &__menu-button {
-    @include button(transparent, 0);
+    @include button();
     @include icon-size(24px);
     position: absolute;
     left: 0px;
@@ -39,7 +39,7 @@
   }
 
   &__action-button {
-    @include button(transparent, 0);
+    @include button();
     @include icon-small;
   }
 }
