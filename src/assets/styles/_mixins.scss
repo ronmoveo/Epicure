@@ -1,0 +1,98 @@
+@import './variables';
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin text() {
+  font-family: $primary-font;                               
+  font-weight: $primary-weight;
+  color: $primary-color;
+}
+
+@mixin icon-small() {
+  width: 20px;
+  height: 20px;
+}
+
+@mixin icon-size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin header-height($height: 46px) {
+  height: $height;
+}
+
+@mixin vertical-center($height: 46px) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin button($bg-color: transparent, $padding: 0) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-color;
+  border: none;
+  cursor: pointer;
+  padding: $padding;
+}
+
+@mixin body-text() {
+  color: $primary-color;
+  font-family: $primary-font;
+  font-size: 16px;
+  font-weight: $primary-weight;
+  line-height: 20px;
+  letter-spacing: 1.97px;
+  text-align: left;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@mixin button() {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: $primary-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(blue, 10%);
+  }
+}
+
+@mixin card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}

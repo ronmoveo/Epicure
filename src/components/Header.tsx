@@ -5,7 +5,6 @@ import './Header.scss';
 const Header: React.FC = () => {
   return (
     <header className="header">
-      <div className="header__container">
         <button className="header__menu-button">
           <img src="/hamburger.svg" alt="Menu" />
         </button>
@@ -22,7 +21,6 @@ const Header: React.FC = () => {
           <button className="header__action-button">
             <img src="/cart.svg" alt="Bag" />
           </button>
-        </div>
       </div>
     </header>
   );

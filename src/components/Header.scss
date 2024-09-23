@@ -1,29 +1,17 @@
-
-@import '../assets/styles/setup/mixins';
+@import '../assets/styles/mixins';
 
 .header {
-  background-color: #fff;
+  background-color: #FFFFFF;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
   height: 46px;
 
-  &__container {
-    @include container;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
-    position: relative;
-    max-width: 375px;
-  }
 
   &__menu-button {
-    @include button(transparent, 0);
+    @include button();
     @include icon-size(24px);
     position: absolute;
     left: 0px;
@@ -47,12 +35,12 @@
     position: absolute;
     right: 20px;
     top: 2px;
-  
+
   }
 
   &__action-button {
-    @include button(transparent, 0);
-    @include icon-size(20px);
+    @include button();
+    @include icon-small;
   }
 }
 
