@@ -8,11 +8,8 @@
   left: 0;
   right: 0;
   height: 46px;
-  z-index: 1000;
+  z-index: 1000; // ensures other content stay underneath the header 
   
-  
-
-
   &__menu-button {
     @include button();
     @include icon-size(24px);

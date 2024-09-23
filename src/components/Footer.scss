@@ -1,6 +1,5 @@
 @import '../assets/styles/mixins';
 
-
 .footer {
     position: relative;
     bottom: 0;
@@ -13,7 +12,6 @@
     .footer__links {
       display: flex;
       flex-direction: column;
-      //justify-content: space-around;
       height: 100%;
       
       a {
