@@ -23,10 +23,13 @@
   }
 }
 
-@mixin text() {
+@mixin text($size: 18px) {
   font-family: $primary-font;                               
   font-weight: $primary-weight;
   color: $primary-color;
+  font-size: $size;
+  font-weight: 200;
+
 }
 
 @mixin icon-small() {

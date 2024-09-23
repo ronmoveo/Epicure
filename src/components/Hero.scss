@@ -11,6 +11,7 @@
   justify-content: center;
   position: relative;
   margin-top: 46px;
+  
 
   &__content {
     background-color: #FFFFFFE0; 
@@ -25,8 +26,7 @@
   }
 
   &__title {
-    @include text;
-    font-size: 24px;
+    @include text(24px);
     line-height: 32px;
     letter-spacing: 1.97px;
     text-align: center;
@@ -38,7 +38,7 @@
     position: relative;
 
     input {
-      @include text;
+      @include text(12px);
       background-color: transparent;
       justify-content: center;
       display: flex;
