@@ -32,6 +32,14 @@
 
 }
 
+@mixin bold-text($size: 18px) {
+  font-family: $primary-font;                               
+  font-weight: $primary-weight;
+  color: $primary-color;
+  font-size: $size;
+  font-weight: 400;
+}
+
 @mixin icon-small() {
   width: 20px;
   height: 20px;

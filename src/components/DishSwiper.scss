@@ -1,0 +1,68 @@
+@import '../assets/styles/variables';
+@import '../assets/styles/mixins';
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    
+    .title {
+        margin-top: 48px;
+        margin-left: -140px;
+        @include text();
+        letter-spacing: 1.25px;
+        line-height: 21.47px;
+        text-align:left;
+    }
+
+    .dishCard {
+        background-color: $card-color;
+        width: 245px;
+        height: 354px;
+         
+        text-align: left;
+        
+        img.dishImage {
+            width: 245px; 
+            height: 152px;  
+            object-fit: cover;
+        }
+
+        .dishInfo {
+            width: 245px;
+            height: 236px;  
+            padding-left: 16px;
+            padding-right: 20px;
+            
+            .dishName {
+                @include bold-text();
+                margin-bottom: 8px;
+                margin-top: 16px;
+            }
+
+            .dishIngredients {
+                @include body-text;
+                margin-bottom: 12px;
+            }
+
+            .dishIcon {
+                width: 30px;
+                height: 24px;
+                margin-bottom: 2.11px; 
+            }
+
+            .dishPrice {
+                @include bold-text(16px);
+                letter-spacing: 1.97px;
+                padding-bottom: 16px;
+            }
+        }
+    }
+}
+
+.swiper-slide {
+    width: auto;
+    max-width: 269px; 
+}
