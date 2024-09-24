@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const RestaurantList: React.FC = () => {
   const restaurants = [
-    { id: 1, name: 'Claro', chef: 'Ran Shmueli' },
-    { id: 2, name: 'Lumia', chef: 'Meir Adoni' },
+    { id: 1, name: 'Claro', chef: 1 },
+    { id: 2, name: 'Lumia', chef: 2 },
   ]
 
   return (

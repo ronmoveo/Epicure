@@ -1,10 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { DishSwiperProps } from "../types";
-import "./DishSwiper.scss";
+import { DishSwiperProps } from "../../../types";
+import "./RestaurantsSwiper.scss";
 import { Mousewheel, FreeMode } from "swiper/modules";
 
-export default function DishSwiper({ dishes }: DishSwiperProps) {
+export default function RestaurantsSwiper({ dishes }: DishSwiperProps) {
   const swiperProps = {
     allowTouchMove: true,
     simulateTouch: true,
@@ -16,7 +16,7 @@ export default function DishSwiper({ dishes }: DishSwiperProps) {
 
   return (
     <section className="container">
-      <h2 className="title">SIGNATURE DISH OF:</h2>
+      <h2 className="title">POPULAR RESTAURANT IN EPICURE:</h2>
       <Swiper {...swiperProps}>
         {dishes.map((dish) => (
           <SwiperSlide key={dish.id}>

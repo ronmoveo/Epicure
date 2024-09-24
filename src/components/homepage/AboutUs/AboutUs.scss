@@ -1,4 +1,4 @@
-@import '../assets/styles/mixins';
+@import "src/assets/styles/_mixins.scss";
 
 
 .Info {
@@ -22,11 +22,6 @@
         margin-top: 151px;
     }
 
-
-}
-
-
-
 h2{
     @include text;
     line-height: 35px;
@@ -43,4 +38,8 @@ p {
     margin-right: 27px;
     margin-top: 0px;
 }
+
+
+}
+
 

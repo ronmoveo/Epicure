@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import './Footer.scss'
 
 const Footer: React.FC = () => {
+  const footerLinks=[{to:"",label:""}]
   return (
     <footer className="footer">
-
          <div className='footer__links'>
             <Link to="/restaurants">
                 Contact Us

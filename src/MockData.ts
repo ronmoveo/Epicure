@@ -23,7 +23,7 @@ export const dishes = [
       id: "3",
       name: "Tom Yum Soup",
       isSignature: true,
-      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime"],
+      ingredients: ["Shrimps", ],
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "vegitarian.svg",
@@ -43,7 +43,7 @@ export const dishes = [
       id: "5",
       name: "Steak",
       isSignature: true,
-      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime"],
+      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime"],
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "/icons/spicy.png",
@@ -53,7 +53,7 @@ export const dishes = [
       id: "6",
       name: "Sushi",
       isSignature: true,
-      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime"],
+      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime",],
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "/icons/spicy.png",
@@ -64,12 +64,23 @@ export const dishes = [
   export const restaurants = [
     {
       id: "r1",
-      name: "Onza",
+      name: "Onza is the best",
+      photo: "/images/onza.jpg",
+
+    },
+    {
+      id: "r2",
+      name: "Onza bnfjkasndf dfanjksdn",
       photo: "/images/onza.jpg",
     },
     {
       id: "r2",
-      name: "Onza",
+      name: "Onza ",
+      photo: "/images/onza.jpg",
+    },
+    {
+      id: "r2",
+      name: "Onza 3123 ",
       photo: "/images/onza.jpg",
     },
   ];
