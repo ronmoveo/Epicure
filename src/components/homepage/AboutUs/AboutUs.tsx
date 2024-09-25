@@ -3,8 +3,7 @@ import './AboutUs.scss';
 
 const Info: React.FC = () => {
   return (
-    <div className="Info">
-        
+    <div className="Info">     
         <img className="Info__logo" src="/fullLogo.svg" alt="Epicure Logo" />
         <button className="header__menu-button">
           <img className="Info__download" src="/download.svg" alt="download" />

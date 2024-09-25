@@ -1,4 +1,22 @@
-export const dishes = [
+import {IconData} from "./types"
+
+export const mockDishIconData: IconData[] = [
+  {
+    symbol: 'spicy.svg',
+    label: 'Spicy'
+  },
+  {
+    symbol: 'vegitarian.svg',
+    label: 'Vegitarian'
+  },
+  {
+    symbol: 'vegan.svg',
+    label: 'Vegan'
+  },
+  
+];
+
+export const mockDishes = [
     {
       id: "1",
       name: "Pad Ki Mao",
@@ -61,7 +79,7 @@ export const dishes = [
     },
   ];
   
-  export const restaurants = [
+  export const mockRestaurants = [
     {
       id: "r1",
       name: "Onza is the best",

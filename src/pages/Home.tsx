@@ -1,10 +1,10 @@
 import React from 'react';
 import DishSwiper from "../components/homepage/DIshSwiper/DishSwiper"
 //import RestaurantsSwiper from '../components/restaurantsSwiper';
-
-
-import {dishes, restaurants } from "../MockData"
-import Icons from '../components/homepage/DishIconsList/DishIconsList';
+import {mockDishes, mockRestaurants } from "../mockData"
+import Hero from '../components/homepage/Hero/Hero';
+import DishIconsList from '../components/homepage/DishIconsList/DishIconsList';
+import AboutUs from '../components/homepage/AboutUs/AboutUs';
 
 
 const Home: React.FC = () => {
@@ -12,8 +12,10 @@ const Home: React.FC = () => {
   return (
     <div className="home">
       {/* <RestaurantsSwiper dishes={dishes} /> */}
-      <DishSwiper dishes={dishes} />
-      <Icons/>
+      <Hero/>
+      <DishSwiper dishes={mockDishes} />
+      <DishIconsList/>
+      <AboutUs/>
     </div>
   );
 };

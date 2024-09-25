@@ -11,4 +11,9 @@ export type Dish = {
 export type  DishSwiperProps = {
     dishes: Dish[];  
   }
-  
+
+
+export interface IconData {
+  symbol: string;
+  label: string;
+}

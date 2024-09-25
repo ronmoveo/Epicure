@@ -1,8 +1,57 @@
 @import "src/assets/styles/_mixins.scss";
 
-.Icons {
-    width: 100%;
-    height: 584px;
-    background-color: #FAFAFA;
+.dish-icons-list {
+  width: 100%;
+  background-color: $primary-gray;
+  @include text;
+  text-align: center;
+  padding-bottom: 24px;
 
+  &__title {
+    @include bold-text(24px);
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    padding-top: 52px;
+    padding-bottom: 32px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include md {
+      flex-direction: row;
+      justify-content: center;
+      padding: 0 52px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+
+    @include md {
+      margin-bottom: 0;
+      margin-right: 56px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__icon {
+    height: 60px;
+    width: 77px;
+    margin-bottom: 32px;
+  }
+
+  &__label {
+    @include text();
+    line-height: 30px;
+    letter-spacing: 1.97px;
+  }
 }
