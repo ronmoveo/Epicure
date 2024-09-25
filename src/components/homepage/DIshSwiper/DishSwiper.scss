@@ -1,67 +1,76 @@
 @import "src/assets/styles/_mixins.scss";
-
-
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 20px;
-    
+  
     .title {
-        margin-top: 48px;
-        margin-left: -140px;
-        @include text();
-        letter-spacing: 1.25px;
-        line-height: 21.47px;
-        text-align:left;
+      margin-top: 48px;
+      margin-left: -140px;
+      @include text();
+      letter-spacing: 1.25px;
+      line-height: 21.47px;
+      text-align: left;
     }
-
+  
     .dishCard {
-        background-color: $card-color;
+      background-color: $card-color;
+      width: 245px;
+      height: 388px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+  
+      img.dishImage {
         width: 245px;
-        height: 354px;
-         
-        text-align: left;
-        
-        img.dishImage {
-            width: 245px; 
-            height: 152px;  
-            object-fit: cover;
+        height: 152px;
+        object-fit: cover;
+      }
+  
+      .dishInfo {
+        padding: 0 16px 16px 16px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        .dishName {
+          @include bold-text();
+          margin-bottom: 8px;
+          margin-top: 16px;
+          height: 29px;
+          overflow-x:auto; 
+          white-space: nowrap;
         }
-
-        .dishInfo {
-            width: 245px;
-            height: 236px;  
-            padding-left: 16px;
-            padding-right: 20px;
-            
-            .dishName {
-                @include bold-text();
-                margin-bottom: 8px;
-                margin-top: 16px;
-            }
-
-            .dishIngredients {
-                @include body-text;
-                margin-bottom: 12px;
-            }
-
-            .dishIcon {
-                width: 30px;
-                height: 24px;
-                margin-bottom: 2.11px; 
-            }
-
-            .dishPrice {
-                @include bold-text(16px);
-                letter-spacing: 1.97px;
-                padding-bottom: 16px;
-            }
+  
+        .dishIngredients {
+          @include body-text;
+          width: 209px;
+          height: 100px; 
+          overflow-y: auto; 
+          margin-bottom: 16px;
+          margin-top: 0px;
         }
+  
+        .dishIcon {
+          width: 30px;
+          height: 24px;
+          margin-bottom: 4px;
+        }
+  
+        .dishPrice {
+          @include bold-text(16px);
+          letter-spacing: 1.97px;
+          margin-top: 6px; 
+          text-align: left; 
+        }
+      }
     }
-}
-
-.swiper-slide {
+  }
+  
+  .swiper-slide {
     width: auto;
-    max-width: 269px; 
-}
+    max-width: 245px;
+  }
+  

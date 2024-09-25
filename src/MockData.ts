@@ -59,12 +59,12 @@ export const mockDishes = [
     },
     {
       id: "5",
-      name: "Steak",
+      name: "Steak with butter wagio meat cow fed ",
       isSignature: true,
       ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime"],
       photo: "/PadKiMao.svg",
       price: 78,
-      icon: "/icons/spicy.png",
+      icon: "spicy.svg",
       type: "dinner",
     },
     {
@@ -74,7 +74,7 @@ export const mockDishes = [
       ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime",],
       photo: "/PadKiMao.svg",
       price: 78,
-      icon: "/icons/spicy.png",
+      icon: "spicy.svg",
       type: "dinner",
     },
   ];
