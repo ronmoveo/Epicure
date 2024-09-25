@@ -20,8 +20,8 @@ export default function DishSwiper({ dishes }: DishSwiperProps) {
   };
 
   return (
-    <section className="container">
-      <h2 className="title">SIGNATURE DISH OF:</h2>
+    <section className="dishContainer">
+      <h2 className="dishTitle">SIGNATURE DISH OF:</h2>
       <Swiper {...swiperProps}>
         {dishes.map((dish) => (
           <SwiperSlide key={dish.id}>
@@ -46,6 +46,9 @@ export default function DishSwiper({ dishes }: DishSwiperProps) {
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="all-restaurants-link">
+        <a href="/all-restaurants">All Restaurants &gt;&gt;</a>
+      </div>
     </section>
   );
 }

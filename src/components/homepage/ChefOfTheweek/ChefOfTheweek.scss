@@ -1,0 +1,54 @@
+@import "src/assets/styles/_mixins.scss";
+
+.chef-of-the-week {
+  .section-title {
+    @include text;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    text-transform: uppercase;
+  }
+
+  .chef-info {
+    margin-bottom: 20px;
+    padding: 0 20px;
+
+    .chef-photo-container {
+      position: relative;
+      width: 100%;
+      max-width: 335px;
+      margin: 0 auto;
+
+      .chef-photo {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 335 / 262;
+        object-fit: cover;
+      }
+
+      .chef-name-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #FFFFFFCC;
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
+
+  .chef-about {
+    @include text;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1.25px;
+    text-align: justify;
+    margin-bottom: 12px;
+    padding: 0 20px;
+  }
+}

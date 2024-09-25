@@ -1,11 +1,13 @@
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { DishSwiperProps } from "../../../types";
-import "./RestaurantsSwiper.scss";
 import { Mousewheel, FreeMode } from "swiper/modules";
+import { RestaurantsSwiperProps } from "../../../types";
+import "./RestaurantsSwiper.scss";
 
-export default function RestaurantsSwiper({ dishes }: DishSwiperProps) {
+export default function RestaurantsSwiper({ restaurants, title, showChef = false }: RestaurantsSwiperProps) {
   const swiperProps = {
+    spaceBetween: 24,
     allowTouchMove: true,
     simulateTouch: true,
     grabCursor: true,
@@ -14,24 +16,38 @@ export default function RestaurantsSwiper({ dishes }: DishSwiperProps) {
     modules: [Mousewheel, FreeMode],
   };
 
+  const stopSwiperScroll = (e: React.TouchEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <section className="container">
-      <h2 className="title">POPULAR RESTAURANT IN EPICURE:</h2>
+    <section className="restaurantContainer">
+      <h2 className="restaurantTitle">{title}</h2>
       <Swiper {...swiperProps}>
-        {dishes.map((dish) => (
-          <SwiperSlide key={dish.id}>
-            <div className="dishCard">
-              <img src={dish.photo} alt={dish.name} className="dishImage" />
-              <div className="dishInfo">
-                <h3 className="dishName">{dish.name}</h3>
-                <p className="dishIngredients">{dish.ingredients.join(", ")}</p>
-                {dish.icon && <img src={dish.icon} alt="icon" className="dishIcon" />}
-                <p className="dishPrice">₪{dish.price}</p>
+        {restaurants.map((restaurant) => (
+          <SwiperSlide key={restaurant.id}>
+            <div className="restaurantCard">
+              <img src={restaurant.photo} alt={restaurant.name} className="restaurantImage" />
+              <div className="restaurantInfo">
+                <h3
+                  className="restaurantName"
+                  onTouchMove={stopSwiperScroll}
+                >
+                  {restaurant.name}
+                </h3>
+                {showChef && <p className="restaurantChef">{restaurant.chef}</p>}
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
+      <div className="all-restaurants-link">
+      <a href="/all-restaurants">
+          All Restaurants 
+          <img src="/arrow.svg" alt="arrow" className="arrow-icon" />
+      </a>
+      </div>
+
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import {IconData} from "./types"
+import {IconData, Restaurant, Dish, Chef} from "./types"
 
 export const mockDishIconData: IconData[] = [
   {
@@ -16,7 +16,7 @@ export const mockDishIconData: IconData[] = [
   
 ];
 
-export const mockDishes = [
+export const mockDishes: Dish[] = [
     {
       id: "1",
       name: "Pad Ki Mao",
@@ -79,27 +79,63 @@ export const mockDishes = [
     },
   ];
   
-  export const mockRestaurants = [
+  export const mockRestaurants: Restaurant[] = [
     {
       id: "r1",
-      name: "Onza is the best",
-      photo: "/images/onza.jpg",
+      chef: "Ran Shmueli",
+      name: "Claro",
+      photo: "PadKiMao.svg",
 
     },
     {
       id: "r2",
-      name: "Onza bnfjkasndf dfanjksdn",
-      photo: "/images/onza.jpg",
+      chef: "Meir Adoni",
+      name: "Lumia the best in the world",
+      photo: "PadKiMao.svg",
     },
     {
-      id: "r2",
+      id: "r3",
+      chef: "aa",
       name: "Onza ",
-      photo: "/images/onza.jpg",
+      photo: "PadKiMao.svg",
     },
     {
-      id: "r2",
+      id: "r4",
+      chef: "aa",
       name: "Onza 3123 ",
-      photo: "/images/onza.jpg",
+      photo: "PadKiMao.svg",
     },
   ];
-  
+
+  export const mockChefs: Chef[] = [
+    {
+      id: "c1",
+      name: "Ran Shmueli",
+      restaurants: [mockRestaurants[0]],
+      photo: "PadKiMao.svg",
+      about: "am",
+
+    },
+    {
+      id: "c2",
+      name: "Meir Adoni",
+      restaurants: [mockRestaurants[0]],
+      photo: "PadKiMao.svg",
+      about: "am",
+    },
+    {
+      id: "c3",
+      name: "Yossi Shitrit",
+      restaurants: [mockRestaurants[0],mockRestaurants[1]],
+      photo: "yosi.svg",
+      about: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
+    },
+    {
+      id: "c4",
+      name: "aa",
+      restaurants: [mockRestaurants[0]],
+      photo: "PadKiMao.svg",
+      about: "am",
+    },
+  ];
+

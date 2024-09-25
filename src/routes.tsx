@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App';  // Import the main layout component
 import Home from './pages/Home';
 import RestaurantList from './pages/RestaurantList';
-import RestaurantDetail from './pages/RestaurantDetail';
+
 
 const routes = createBrowserRouter([
   {
@@ -11,7 +11,6 @@ const routes = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },   // Render Home component in Outlet
       { path: "/restaurants", element: <RestaurantList /> },
-      { path: "/restaurant/:id", element: <RestaurantDetail /> },
     ],
   },
 ]);
