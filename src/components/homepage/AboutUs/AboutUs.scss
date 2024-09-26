@@ -11,37 +11,10 @@
     flex-direction: column;
   }
 
-  &__logo {
-    width: 102px;
-    height: 95px;
-    margin-bottom: 20px;
-  }
+}
 
-
-  h2 {
-    @include bold-text(22px);
-    margin-top: 20px;
-    letter-spacing: 1.25px;
-  }
-
-  p {
-    @include text(16px);
-    margin-top: 10px;
-    line-height: 28px;
-    letter-spacing: 1.25px;
-  }
-
-  &__download-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-
-  &__download {
-    width: 180px;
-    height: 52px;
-    margin-bottom: 10px;
-  }
-
-
+.Logo {
+  width: 102px;
+  height: 95px;
+  margin-bottom: 20px;
 }
