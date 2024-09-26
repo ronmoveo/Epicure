@@ -1,4 +1,4 @@
-import {IconData, Restaurant, Dish, Chef} from "./types"
+import {IconData, Restaurant, Dish, Chef} from "./interfaces"
 
 export const mockDishIconData: IconData[] = [
   {

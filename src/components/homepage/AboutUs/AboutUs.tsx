@@ -1,22 +1,26 @@
 import React from 'react';
 import './AboutUs.scss';
+import { aboutUsText } from '../../../utils/constants';
+import {AboutUsProps }  from '../../../interfaces';
 
-const Info: React.FC = () => {
+
+const AboutUs: React.FC<AboutUsProps> = ({ downloads }) => {
   return (
-    <div className="Info">     
-        <img className="Info__logo" src="/fullLogo.svg" alt="Epicure Logo" />
-        <button className="header__menu-button">
-          <img className="Info__download" src="/download.svg" alt="download" />
-        </button>
-        <h2> About Us: </h2>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum non 
-            eu ipsum. Cras porta malesuada eros, eget blandit
-            turpis suscipit at.  Vestibulum sed massa in magna sodales porta.  Vivamus elit urna, 
-            dignissim a vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a lacus vel justo fermentum bibendum no
-            eu ipsum. Cras porta malesuada eros.
-        </p>
+    <div className="AboutUs">
+      <div className="AboutUs__content">
+        <img className="AboutUs__logo" src="/fullLogo.svg" alt="Epicure Logo" />
+        <div className="AboutUs__text">
+          <h2>About Us:</h2>
+          <p>{aboutUsText}</p>
+        </div>
+      </div>
+      <div className="AboutUs__download-container">
+        {downloads.map((button, index) => (
+          <img key={index} className="AboutUs__download" src={button.image} alt={`${button.name} Download`} /> 
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Info;
+export default AboutUs;

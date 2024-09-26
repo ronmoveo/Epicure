@@ -2,7 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Mousewheel, FreeMode } from "swiper/modules";
-import { RestaurantsSwiperProps } from "../../../types";
+import { RestaurantsSwiperProps } from "../../../interfaces";
 import "./RestaurantsSwiper.scss";
 
 export default function RestaurantsSwiper({ restaurants, title, showChef = false }: RestaurantsSwiperProps) {
@@ -42,7 +42,7 @@ export default function RestaurantsSwiper({ restaurants, title, showChef = false
         ))}
       </Swiper>
       <div className="all-restaurants-link">
-      <a href="/all-restaurants">
+      <a href="/restaurants">
           All Restaurants 
           <img src="/arrow.svg" alt="arrow" className="arrow-icon" />
       </a>

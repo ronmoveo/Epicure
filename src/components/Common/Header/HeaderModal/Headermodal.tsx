@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeaderModal.scss';
-
-interface HeaderModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
+import { HeaderModalProps } from '../../../../interfaces';
 
 const HeaderModal: React.FC<HeaderModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

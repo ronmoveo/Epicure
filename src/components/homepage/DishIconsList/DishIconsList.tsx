@@ -1,6 +1,6 @@
 import React from 'react';
 import { mockDishIconData } from "../../../mockData";
-import { IconData } from "../../../types";
+import { IconData } from "../../../interfaces";
 
 import './DishIconsList.scss';
 

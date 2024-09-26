@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { DishSwiperProps } from "../../../types";
+import { DishSwiperProps } from "../../../interfaces";
 import "./DishSwiper.scss";
 import { Mousewheel, FreeMode } from "swiper/modules";
 
@@ -47,7 +47,7 @@ export default function DishSwiper({ dishes }: DishSwiperProps) {
         ))}
       </Swiper>
       <div className="all-restaurants-link">
-        <a href="/all-restaurants">All Restaurants &gt;&gt;</a>
+        <a href="/restaurants">All Restaurants &gt;&gt;</a>
       </div>
     </section>
   );

@@ -6,9 +6,10 @@ import DishIconsList from '../components/homepage/DishIconsList/DishIconsList';
 import AboutUs from '../components/homepage/AboutUs/AboutUs';
 import RestaurantsSwiper from '../components/homepage/ResaurantsSwiper/RestaurantsSwiper';
 import ChefOfTheWeek from '../components/homepage/ChefOfTheweek/ChefOfTheweek';
+import { downloadButtons } from '../utils/constants';
 
 const Home: React.FC = () => {
-  // Find Yossi Shitrit in the mockChefs array
+  
   const yossiShitrit = mockChefs.find(chef => chef.name === "Yossi Shitrit");
 
   return (
@@ -18,7 +19,7 @@ const Home: React.FC = () => {
       <DishSwiper dishes={mockDishes} />
       <DishIconsList/>
       {yossiShitrit && <ChefOfTheWeek chef={yossiShitrit} />}
-      <AboutUs/>
+      <AboutUs downloads={downloadButtons} />
     </div>
   );
 };

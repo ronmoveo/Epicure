@@ -1,4 +1,4 @@
-export type Dish = {
+export interface Dish {
     id: string;
     name: string;
     photo: string;
@@ -9,7 +9,7 @@ export type Dish = {
     isSignature: boolean;
   }
 
-export type Restaurant = {
+export interface Restaurant {
       id: string;
       chef: string;
       name: string;
@@ -17,7 +17,7 @@ export type Restaurant = {
 
 }
 
-export type Chef = {
+export interface Chef {
   id: string;
   name: string;
   restaurants: Restaurant[];
@@ -25,18 +25,33 @@ export type Chef = {
   about: string;
 }
 
-export type  DishSwiperProps = {
+export interface  DishSwiperProps {
     dishes: Dish[];  
   }
 
 
-export type IconData = {
+export interface IconData {
   symbol: string;
   label: string;
 }
 
-export type RestaurantsSwiperProps = {
+export interface RestaurantsSwiperProps {
   restaurants: Restaurant[];
   title: string;
   showChef?: boolean;
+}
+
+export interface HeaderModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+
+export interface DownloadButton {
+  name: string;
+  image: string;
+}
+
+export interface AboutUsProps {
+  downloads: DownloadButton[];
 }

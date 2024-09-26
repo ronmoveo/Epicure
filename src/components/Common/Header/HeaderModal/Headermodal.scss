@@ -6,7 +6,7 @@
     left: 0;
     width: 100%;
     height: 413px;
-    background-color: white;
+    background-color: #F2F2F2;
     z-index: 1001;
     overflow-y: auto;
     border: 1px solid #F2F2F2;
@@ -37,7 +37,7 @@
   
       a {
         text-decoration: none;
-        color: #000;
+        color: $primary-color;
         font-size: 18px;
         font-weight: 200;
       }

@@ -59,15 +59,15 @@
   transform: translateY(-50%);
 }
 
-@mixin button($bg-color: transparent, $padding: 0) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $bg-color;
-  border: none;
-  cursor: pointer;
-  padding: $padding;
-}
+// @mixin button($bg-color: transparent, $padding: 0) {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: $bg-color;
+//   border: none;
+//   cursor: pointer;
+//   padding: $padding;
+// }
 
 @mixin body-text() {
   color: $primary-color;

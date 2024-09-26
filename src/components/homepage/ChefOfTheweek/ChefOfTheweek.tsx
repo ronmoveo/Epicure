@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chef } from '../../../types';
+import { Chef } from '../../../interfaces';
 import RestaurantsSwiper from '../ResaurantsSwiper/RestaurantsSwiper';
 import './ChefOfTheWeek.scss';
 

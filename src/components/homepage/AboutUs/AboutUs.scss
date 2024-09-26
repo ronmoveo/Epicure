@@ -1,46 +1,47 @@
 @import "src/assets/styles/_mixins.scss";
 
+.AboutUs {
+  margin-top: 48px;
+  padding: 20px;
+  background-color: $primary-gray;
+  position: relative;
 
-.Info {
-    position: relative;
-    width: 100%;
-    height: 867px;
+  &__content {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    margin-top: 48px;
-    background-color: $primary-gray;
+  }
 
-    &__logo {
-        width: 102px;
-        height: 95px;
-        margin-top: 24px;
-      }
-    
-    &__download{
-        width: 180px;
-        height: 120px;
-        margin-top: 151px;
-    }
+  &__logo {
+    width: 102px;
+    height: 95px;
+    margin-bottom: 20px;
+  }
 
-h2{
-    @include text;
-    line-height: 35px;
+
+  h2 {
+    @include bold-text(22px);
+    margin-top: 20px;
     letter-spacing: 1.25px;
-    margin-top: 219px;
-    margin-left: 1px;
+  }
 
-}
-
-p {
-    @include text;
+  p {
+    @include text(16px);
+    margin-top: 10px;
     line-height: 28px;
-    letter-spacing: 2.14px;
-    margin-right: 32px;
-    margin-top: 0px;
-}
+    letter-spacing: 1.25px;
+  }
+
+  &__download-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  &__download {
+    width: 180px;
+    height: 52px;
+    margin-bottom: 10px;
+  }
 
 
 }
-
-
