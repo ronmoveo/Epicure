@@ -1,18 +1,13 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import HeaderModal from './HeaderModal/Headermodal';
 import './Header.scss';
+import NavBar from './NavBar/NavBar';
 
 const Header: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
 
   return (
     <header className="header">
-      <button className="header__menu-button" onClick={toggleModal}>
+      <button className="header__menu-button">
         <img src="/hamburger.svg" alt="Menu" />
       </button>
       <Link to="/" className="header__logo">
@@ -29,7 +24,7 @@ const Header: React.FC = () => {
           <img src="/cart.svg" alt="Bag" />
         </button>
       </div>
-      <HeaderModal isOpen={isModalOpen} onClose={toggleModal} />
+      <NavBar/>
     </header>
   );
 };
