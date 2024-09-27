@@ -41,11 +41,6 @@ export interface RestaurantsSwiperProps {
   showChef?: boolean;
 }
 
-export interface HeaderModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
 
 export interface DownloadButton {
   name: string;
@@ -54,4 +49,12 @@ export interface DownloadButton {
 
 export interface AboutUsProps {
   downloads: DownloadButton[];
+}
+
+
+export interface CommonSwiperProps {
+  items: any[];
+  renderItem: (item: any) => React.ReactNode;
+  title: string;
+  allLink?: string;
 }

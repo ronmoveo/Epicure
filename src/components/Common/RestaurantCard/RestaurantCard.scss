@@ -1,0 +1,39 @@
+@import "src/assets/styles/_mixins.scss";
+
+.restaurantCard {
+  background-color: $card-color;
+  width: 245px;
+  height: 232.8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+
+  .restaurantImage {
+    width: 100%;
+    height: 152px;
+    object-fit: cover;
+  }
+
+  .restaurantInfo {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+
+    .restaurantName {
+      @include bold-text();
+      margin-top: 16px;
+      margin-bottom: 8px;
+      height: 29px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .restaurantChef {
+      @include body-text;
+      margin-top: 0px;
+    }
+  }
+}

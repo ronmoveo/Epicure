@@ -95,10 +95,6 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: darken(blue, 10%);
-  }
 }
 
 @mixin card {
