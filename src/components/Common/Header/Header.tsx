@@ -1,15 +1,13 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 import NavBar from './NavBar/NavBar';
+import CartModal from './CartModal/CartModal';
 
 const Header: React.FC = () => {
-
-
   return (
     <header className="header">
-      <button className="header__menu-button">
-        <img src="/hamburger.svg" alt="Menu" />
-      </button>
+      <NavBar />
       <Link to="/" className="header__logo">
         <img src="/logo.svg" alt="Epicure Logo" />
       </Link>
@@ -20,11 +18,8 @@ const Header: React.FC = () => {
         <button className="header__action-button">
           <img src="/person.svg" alt="User" />
         </button>
-        <button className="header__action-button">
-          <img src="/cart.svg" alt="Bag" />
-        </button>
+        <CartModal />
       </div>
-      <NavBar/>
     </header>
   );
 };

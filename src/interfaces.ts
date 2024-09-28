@@ -58,3 +58,4 @@ export interface CommonSwiperProps {
   title: string;
   allLink?: string;
 }
+

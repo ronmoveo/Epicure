@@ -17,3 +17,5 @@ export const aboutUsText = `
   Vestibulum sed massa in magna sodales porta. Vivamus elit urna, 
   dignissim a vestibulum.
 `;
+
+

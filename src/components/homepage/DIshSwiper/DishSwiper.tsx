@@ -1,5 +1,3 @@
-// DishSwiper.tsx
-import React from 'react';
 import CommonSwiper from '../../Common/CommonSwiper/CommonSwiper';
 import DishCard from '../../Common/DishCard/DishCard';
 import { DishSwiperProps } from '../../../interfaces';

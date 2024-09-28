@@ -1,5 +1,3 @@
-// RestaurantsSwiper.tsx
-import React from 'react';
 import CommonSwiper from '../../Common/CommonSwiper/CommonSwiper';
 import RestaurantCard from '../../Common/RestaurantCard/RestaurantCard';
 import { RestaurantsSwiperProps } from '../../../interfaces';

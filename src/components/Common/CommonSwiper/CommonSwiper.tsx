@@ -1,19 +1,13 @@
-import React from 'react';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Mousewheel, FreeMode } from "swiper/modules";
 import "./CommonSwiper.scss";
-
-interface CommonSwiperProps {
-  items: any[];
-  renderItem: (item: any) => React.ReactNode;
-  title: string;
-  allLink?: string;
-}
-
+import { CommonSwiperProps } from "../../../interfaces";
+import { SwiperOptions } from "swiper/types";
 
 export default function CommonSwiper({ items, renderItem, title, allLink }: CommonSwiperProps) {
-  const swiperProps = {
+  const swiperProps: SwiperOptions = {
     spaceBetween: 24,
     slidesPerView: 'auto',
     allowTouchMove: true,

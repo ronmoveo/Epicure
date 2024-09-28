@@ -2,7 +2,7 @@
 
 
 .header {
-  background-color: #FFFFFF;
+  background-color: $primary-white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -45,8 +45,4 @@
   }
 }
 
-@media (min-width: 376px) {
-  .header__container {
-    max-width: none;
-  }
-}
+
