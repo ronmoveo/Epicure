@@ -1,27 +1,19 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Mousewheel, FreeMode } from "swiper/modules";
 import "./CommonSwiper.scss";
 import { CommonSwiperProps } from "../../../interfaces";
-import { SwiperOptions } from "swiper/types";
+import { ALL_RESTAURANTS, SWIPER_PROPS } from "../../../utils/constants";
 
-export default function CommonSwiper({ items, renderItem, title, allLink }: CommonSwiperProps) {
-  const swiperProps: SwiperOptions = {
-    spaceBetween: 24,
-    slidesPerView: 'auto',
-    allowTouchMove: true,
-    simulateTouch: true,
-    grabCursor: true,
-    freeMode: true,
-    mousewheel: true,
-    modules: [Mousewheel, FreeMode],
-  };
+const CommonSwiper: React.FC<CommonSwiperProps> = ({ items, renderItem, title, allLink }) => {
   return (
     <section className="swiperContainer">
       <h2 className="swiperTitle">{title}</h2>
       <div className="swiperWrapper">
-        <Swiper {...swiperProps}>
+        <Swiper 
+          {...SWIPER_PROPS}
+          slidesOffsetBefore={20}
+          slidesOffsetAfter={20}
+        >
           {items.map((item) => (
             <SwiperSlide key={item.id}>{renderItem(item)}</SwiperSlide>
           ))}
@@ -30,7 +22,7 @@ export default function CommonSwiper({ items, renderItem, title, allLink }: Comm
       {allLink && (
         <div className="all-items-link">
           <a href={allLink}>
-            All {allLink.slice(1)} 
+            {ALL_RESTAURANTS}  
             <img src="/arrow.svg" alt="arrow" className="arrow-icon" />
           </a>
         </div>
@@ -38,3 +30,5 @@ export default function CommonSwiper({ items, renderItem, title, allLink }: Comm
     </section>
   );
 }
+
+export default CommonSwiper;

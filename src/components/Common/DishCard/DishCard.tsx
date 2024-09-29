@@ -1,16 +1,8 @@
-// DishCard.tsx
 import React from 'react';
-import { Dish } from '../../../interfaces';
 import './DishCard.scss';
+import { DishCardProps, stopSwiperScroll } from '../../../interfaces';
 
-interface DishCardProps {
-  dish: Dish;
-}
-
-export default function DishCard({ dish }: DishCardProps) {
-  const stopSwiperScroll = (e: React.TouchEvent) => {
-    e.stopPropagation();
-  };
+const DishCard: React.FC <DishCardProps> = ({ dish }) => {
 
   return (
     <div className="dishCard">
@@ -26,3 +18,5 @@ export default function DishCard({ dish }: DishCardProps) {
     </div>
   );
 }
+
+export default DishCard;

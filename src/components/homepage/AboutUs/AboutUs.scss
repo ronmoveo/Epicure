@@ -5,16 +5,14 @@
   padding: 20px;
   background-color: $primary-gray;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
+
+
+  .Logo {
+    width: 102px;
+    height: 95px;
+    margin-bottom: 20px;
   }
-
-}
-
-.Logo {
-  width: 102px;
-  height: 95px;
-  margin-bottom: 20px;
 }

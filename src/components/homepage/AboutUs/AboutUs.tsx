@@ -2,17 +2,15 @@ import React from 'react';
 import './AboutUs.scss';
 import Logo from '../../Common/EpicureLogo';
 import DownloadLogos from './DownloadLogos/DownloadLogos';
-import { AboutUsProps } from '../../../interfaces';
 import AboutUsText from './AboutUsText/AboutUsText';
 
-const AboutUs: React.FC<AboutUsProps> = ({ downloads }) => {
+const AboutUs: React.FC = () => {
   return (
     <div className="AboutUs">
-      <div className="AboutUs__content">
         <Logo />
+        <DownloadLogos />
         <AboutUsText />
-      </div>
-      <DownloadLogos downloads={downloads} />
+ 
     </div>
   );
 };

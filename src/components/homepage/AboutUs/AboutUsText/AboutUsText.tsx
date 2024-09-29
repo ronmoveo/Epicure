@@ -1,11 +1,11 @@
 import React from 'react';
-import { aboutUsText } from '../../../../utils/constants';
+import { ABOUT_US, ABOUT_US_TEXT } from '../../../../utils/constants';
 import "./AboutUsText.scss";
 
 const AboutUsText: React.FC = () => (
   <div className="AboutUsText">
-    <h2>About Us:</h2>
-    <p>{aboutUsText}</p>
+    <h2>{ABOUT_US}</h2>
+    <p>{ABOUT_US_TEXT}</p>
   </div>
 );
 

@@ -6,7 +6,7 @@ import DishIconsList from '../components/homepage/DishIconsList/DishIconsList';
 import AboutUs from '../components/homepage/AboutUs/AboutUs';
 import RestaurantsSwiper from '../components/homepage/ResaurantsSwiper/RestaurantsSwiper';
 import ChefOfTheWeek from '../components/homepage/ChefOfTheweek/ChefOfTheweek';
-import { downloadButtons } from '../utils/constants';
+
 
 const Home: React.FC = () => {
   
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       <DishSwiper dishes={mockDishes} />
       <DishIconsList/>
       {yossiShitrit && <ChefOfTheWeek chef={yossiShitrit} />}
-      <AboutUs downloads={downloadButtons} />
+      <AboutUs />
     </div>
   );
 };

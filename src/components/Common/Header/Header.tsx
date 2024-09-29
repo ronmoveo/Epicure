@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Header.scss';
 import NavBar from './NavBar/NavBar';
 import CartModal from './CartModal/CartModal';
+import SearchModal from './SearchModal/SearchModal';
 
 const Header: React.FC = () => {
   return (
@@ -12,9 +13,7 @@ const Header: React.FC = () => {
         <img src="/logo.svg" alt="Epicure Logo" />
       </Link>
       <div className="header__actions">
-        <button className="header__action-button">
-          <img src="/search.svg" alt="Search" />
-        </button>
+        <SearchModal />
         <button className="header__action-button">
           <img src="/person.svg" alt="User" />
         </button>

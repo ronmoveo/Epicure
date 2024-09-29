@@ -1,22 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.scss'
+import { footerLinks } from '../../../utils/constants';
+
 
 const Footer: React.FC = () => {
-  const footerLinks=[{to:"",label:""}]
   return (
     <footer className="footer">
-         <div className='footer__links'>
-            <Link to="/restaurants">
-                Contact Us
-            </Link>
-            <Link to="/restaurants">
-                Term of Use
-            </Link>
-            <Link to="/restaurants">
-                Privacy Policy
-            </Link>
-         </div>
+      <div className="footer__links">
+        {footerLinks.map((link, index) => (
+          <Link key={index} to={link.to}>
+            {link.label}
+          </Link>
+        ))}
+      </div>
     </footer>
   );
 };

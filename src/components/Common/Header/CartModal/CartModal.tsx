@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './CartModal.scss';
+import { YOUR_BAG_IS_EMPTY } from '../../../../utils/constants';
 
 const CartModal: React.FC = () => {
+  
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
@@ -21,7 +23,7 @@ const CartModal: React.FC = () => {
               <div className="cart-modal__image-wrapper">
                 <img src="/cart.svg" alt="Bag" className="cart-modal__image" />
               </div>
-              <p className="cart-modal__text">YOUR BAG IS EMPTY</p>
+              <p className="cart-modal__text">{YOUR_BAG_IS_EMPTY}</p>
             </div>
           </div>
         </div>

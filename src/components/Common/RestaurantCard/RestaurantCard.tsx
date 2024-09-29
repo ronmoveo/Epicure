@@ -1,17 +1,10 @@
-// RestaurantCard.tsx
 import React from 'react';
-import { Restaurant } from '../../../interfaces';
 import './RestaurantCard.scss';
+import { RestaurantCardProps, stopSwiperScroll } from '../../../interfaces';
 
-interface RestaurantCardProps {
-  restaurant: Restaurant;
-  showChef?: boolean;
-}
 
-export default function RestaurantCard({ restaurant, showChef = false }: RestaurantCardProps) {
-  const stopSwiperScroll = (e: React.TouchEvent) => {
-    e.stopPropagation();
-  };
+
+const RestaurantCard: React.FC <RestaurantCardProps> = ({ restaurant, showChef = false }) => {
 
   return (
     <div className="restaurantCard">
@@ -25,3 +18,5 @@ export default function RestaurantCard({ restaurant, showChef = false }: Restaur
     </div>
   );
 }
+
+export default  RestaurantCard;

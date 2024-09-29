@@ -1,4 +1,5 @@
 @import './variables';
+
 @mixin sm {
   @media (min-width: #{$screen-sm-min}) {
     @content;
@@ -43,6 +44,7 @@
 @mixin icon-small() {
   width: 20px;
   height: 20px;
+  background: transparent;
 }
 
 @mixin icon-size($size) {
@@ -58,16 +60,6 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
-// @mixin button($bg-color: transparent, $padding: 0) {
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: $bg-color;
-//   border: none;
-//   cursor: pointer;
-//   padding: $padding;
-// }
 
 @mixin body-text() {
   color: $primary-color;
@@ -95,11 +87,4 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-@mixin card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
 }

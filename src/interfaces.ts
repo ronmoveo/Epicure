@@ -1,3 +1,4 @@
+
 export interface Dish {
     id: string;
     name: string;
@@ -47,9 +48,6 @@ export interface DownloadButton {
   image: string;
 }
 
-export interface AboutUsProps {
-  downloads: DownloadButton[];
-}
 
 
 export interface CommonSwiperProps {
@@ -59,3 +57,23 @@ export interface CommonSwiperProps {
   allLink?: string;
 }
 
+export interface DishCardProps {
+  dish: Dish;
+}
+
+export const stopSwiperScroll = (e: React.TouchEvent) => {
+  e.stopPropagation();
+};
+
+export interface RestaurantCardProps {
+  restaurant: Restaurant;
+  showChef?: boolean;
+}
+
+export interface SearchBarProps {
+  placeholder: string;
+}
+
+export interface ChefOfTheWeekProps {
+  chef: Chef;
+}

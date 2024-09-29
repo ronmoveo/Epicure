@@ -1,14 +1,20 @@
 @import "src/assets/styles/_mixins.scss";
 
-h2 {
-    @include bold-text(22px);
+
+.AboutUsText{
+  @include text();
+  letter-spacing: 1.25px;
+
+
+  h2 {
     margin-top: 20px;
-    letter-spacing: 1.25px;
+    line-height: 35px;
   }
 
   p {
-    @include text(16px);
+
     margin-top: 10px;
     line-height: 28px;
-    letter-spacing: 1.25px;
   }
+}
+
