@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import './FilterBar.scss';
-
-interface FilterBarProps {
-  filters: string[];
-  onFilterChange: (selectedFilter: string) => void;
-}
+import { FilterBarProps } from '../../../interfaces';
 
 const FilterBar: React.FC<FilterBarProps> = ({ filters, onFilterChange }) => {
   const [selectedFilter, setSelectedFilter] = useState(filters[0]);

@@ -87,3 +87,9 @@ export interface SearchBarProps {
 export interface ChefOfTheWeekProps {
   chef: Chef;
 }
+
+export interface FilterBarProps {
+  filters: string[];
+  onFilterChange: (selectedFilter: string) => void;
+}
+

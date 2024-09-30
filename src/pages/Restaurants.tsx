@@ -4,25 +4,13 @@ import { mockRestaurants } from '../mockData';
 import { Restaurant } from '../interfaces';
 import FilterBar from '../components/RestaurantPage/FilterBar/FilterBar';
 import RestaurantCard from '../components/Common/RestaurantCard/RestaurantCard';
-import { filterMostPopular, filterNewRestaurants, filterOpenNow } from '../components/RestaurantPage/restaurantFilters';
+import { handleFilterRestaurants } from '../components/RestaurantPage/restaurantFilters';
+import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS, RESTAURANTS_CARD_HEIGHT, RESTAURANTS_IMAGE_HEIGHT } from '../utils/constants';
 
-const handleFilterRestaurants = (filter: string, restaurants: Restaurant[]): Restaurant[] => {
-  switch (filter) {
-    case 'All':
-      return restaurants;
-    case 'Open Now':
-      return filterOpenNow(restaurants);
-    case 'Most Popular':
-      return filterMostPopular(restaurants);
-    case 'New':
-      return filterNewRestaurants(restaurants);
-    default:
-      return restaurants;
-  }
-};
+
 
 const Restaurants: React.FC = () => {
-  const filters = ['All', 'New', 'Most Popular', 'Open Now'];
+  const filters = [ALL, NEW, MOST_POPULAR, OPEN_NOW];
   const [selectedFilter, setSelectedFilter] = useState(filters[0]);
   const [restaurants, setRestaurants] = useState<Restaurant[]>(mockRestaurants);
 
@@ -36,7 +24,7 @@ const Restaurants: React.FC = () => {
 
   return (
     <div className="restaurants">
-      <h1 className="restaurants__title">RESTAURANTS</h1>
+      <h1 className="restaurants__title">{RESTAURANTS}</h1>
       <div className="restaurants__filter-bar">
         <FilterBar filters={filters} onFilterChange={handleFilterChange} />
       </div>
@@ -46,8 +34,8 @@ const Restaurants: React.FC = () => {
             key={restaurant.id} 
             restaurant={restaurant} 
             showChef={true}
-            imageHeight="207px"
-            cardHeight="288px"
+            imageHeight = {RESTAURANTS_IMAGE_HEIGHT}
+            cardHeight = {RESTAURANTS_CARD_HEIGHT}
           />
         ))}
       </div>

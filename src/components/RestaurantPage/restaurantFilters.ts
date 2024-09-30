@@ -1,4 +1,5 @@
 import { Restaurant } from "../../interfaces";
+import { ALL, MOST_POPULAR, NEW, OPEN_NOW } from "../../utils/constants";
 
 export const filterOpenNow = (restaurants: Restaurant[]): Restaurant[] => {
   const now = new Date();
@@ -21,4 +22,20 @@ export const filterNewRestaurants = (restaurants: Restaurant[]): Restaurant[] =>
   return restaurants
     .sort((a, b) => new Date(b.openedDate).getTime() - new Date(a.openedDate).getTime())
     .slice(0, 3);
+};
+
+
+export const  handleFilterRestaurants = (filter: string, restaurants: Restaurant[]): Restaurant[] => {
+  switch (filter) {
+    case ALL:
+      return restaurants;
+    case OPEN_NOW:
+      return filterOpenNow(restaurants);
+    case MOST_POPULAR:
+      return filterMostPopular(restaurants);
+    case NEW:
+      return filterNewRestaurants(restaurants);
+    default:
+      return restaurants;
+  }
 };
