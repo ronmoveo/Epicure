@@ -2,8 +2,7 @@
 
 .restaurantCard {
   background-color: $card-color;
-  width: 245px;
-  height: 232.8px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -11,22 +10,20 @@
 
   .restaurantImage {
     width: 100%;
-    height: 152px;
     object-fit: cover;
+    background-color: $primary-gray;
   }
 
   .restaurantInfo {
-    padding-left: 16px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    flex-grow: 1;
+
 
     .restaurantName {
       @include bold-text();
-      margin-top: 16px;
       margin-bottom: 8px;
-      height: 29px;
       overflow-x: auto;
       white-space: nowrap;
     }

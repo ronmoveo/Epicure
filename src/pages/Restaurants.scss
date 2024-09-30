@@ -1,0 +1,33 @@
+@import "src/assets/styles/_mixins.scss";
+
+.restaurants {
+    padding-left: 16.89px;
+    padding-right: 11.11px;
+    margin-top: 60px;
+  
+    &__title {
+      line-height: 24px;
+      letter-spacing: 1.92px;
+      margin-bottom: 20px;
+
+    }
+  
+    &__filter-bar {
+      margin-bottom: 20px;
+    }
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      justify-items: center;
+      padding-right: 5.72px;
+  
+      @include md {
+        grid-template-columns: repeat(auto-fill, minmax(288px, 2fr));
+        max-width: 3 * 288px;
+      }
+    }
+  }
+
+

@@ -3,7 +3,7 @@ import { SwiperOptions } from "swiper/types";
 import { Mousewheel, FreeMode } from "swiper/modules";
 import { RoutePaths } from "./enum";
 
-
+export const RESTAURANTS = "Restaurants";
 export const ALL_RESTAURANTS = "All Restaurants";
 export const YOUR_BAG_IS_EMPTY = "YOUR BAG IS EMPTY";
 export const SEARCH = "Search";
@@ -62,3 +62,4 @@ export const navLinks = [
   { label: 'Privacy Policy', path: RoutePaths.RESTAURANTS },
   
 ];
+

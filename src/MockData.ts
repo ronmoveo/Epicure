@@ -22,7 +22,7 @@ export const mockDishes: Dish[] = [
       name: "Pad Ki Mao",
       isSignature: true,
       ingredients: ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili Brown Coconut"],
-      photo: "/PadKiMao.svg",
+      photo: "//PadKiMao.svg",
       price: 88,
       icon: "spicy.svg",
       type: "dinner",
@@ -84,28 +84,89 @@ export const mockDishes: Dish[] = [
       id: "r1",
       chef: "Ran Shmueli",
       name: "Claro",
-      photo: "PadKiMao.svg",
-
+      rating: 4,
+      photo: "/PadKiMao.svg",
+      openedDate: new Date("1997-11-12"),
+      openingHours: [
+        { day: "Sunday", open: "Closed", close: "Closed" },
+        { day: "Monday", open: "09:00", close: "22:00" },
+        { day: "Tuesday", open: "09:00", close: "22:00" },
+        { day: "Wednesday", open: "09:00", close: "22:00" },
+        { day: "Thursday", open: "09:00", close: "22:00" },
+        { day: "Friday", open: "09:00", close: "22:00" },
+        { day: "Saturday", open: "10:00", close: "20:00" },
+      ]
     },
     {
       id: "r2",
-      chef: "Meir Adoni",
-      name: "Lumia the best in the world",
-      photo: "PadKiMao.svg",
+      chef: "Yariv Malili",
+      name: "Kab Kem",
+      rating: 4.5,
+      photo: "/kab-kem.svg",
+      openedDate: new Date("2007-11-12"),
+      openingHours: [
+        { day: "Sunday", open: "Closed", close: "Closed" },
+        { day: "Monday", open: "09:00", close: "22:00" },
+        { day: "Tuesday", open: "09:00", close: "22:00" },
+        { day: "Wednesday", open: "09:00", close: "22:00" },
+        { day: "Thursday", open: "09:00", close: "22:00" },
+        { day: "Friday", open: "09:00", close: "22:00" },
+        { day: "Saturday", open: "10:00", close: "20:00" },
+      ]
     },
     {
       id: "r3",
-      chef: "aa",
-      name: "Onza ",
-      photo: "PadKiMao.svg",
+      chef: "Yuval Ben Moshe",
+      name: "Yapan",
+      rating: 3.5,
+      photo: "/Yapan.svg",
+      openedDate: new Date("2020-11-12"),
+      openingHours: [
+        { day: "Sunday", open: "Closed", close: "Closed" },
+        { day: "Monday", open: "09:00", close: "22:00" },
+        { day: "Tuesday", open: "09:00", close: "22:00" },
+        { day: "Wednesday", open: "09:00", close: "22:00" },
+        { day: "Thursday", open: "09:00", close: "22:00" },
+        { day: "Friday", open: "09:00", close: "22:00" },
+        { day: "Saturday", open: "10:00", close: "20:00" },
+      ]
     },
     {
       id: "r4",
-      chef: "aa",
-      name: "Onza 3123 ",
-      photo: "PadKiMao.svg",
+      chef: "Yanir Green",
+      name: "Tiger Lily",
+      rating: 4.5,
+      photo: "/tiger-lily.svg",
+      openedDate: new Date("2022-11-12"),
+      openingHours: [
+        { day: "Sunday", open: "Closed", close: "Closed" },
+        { day: "Monday", open: "09:00", close: "22:00" },
+        { day: "Tuesday", open: "09:00", close: "22:00" },
+        { day: "Wednesday", open: "09:00", close: "22:00" },
+        { day: "Thursday", open: "09:00", close: "22:00" },
+        { day: "Friday", open: "09:00", close: "22:00" },
+        { day: "Saturday", open: "10:00", close: "20:00" },
+      ]
+    },
+    {
+      id: "r5",
+      chef: "Shahaf Shabtay",
+      name: "Nitan Thai",
+      rating: 5,
+      photo: "/nithan-thai.svg",
+      openedDate: new Date("2003-11-12"),
+      openingHours: [
+        { day: "Sunday", open: "Closed", close: "Closed" },
+        { day: "Monday", open: "09:00", close: "22:00" },
+        { day: "Tuesday", open: "09:00", close: "22:00" },
+        { day: "Wednesday", open: "09:00", close: "22:00" },
+        { day: "Thursday", open: "09:00", close: "22:00" },
+        { day: "Friday", open: "09:00", close: "22:00" },
+        { day: "Saturday", open: "10:00", close: "20:00" },
+      ]
     },
   ];
+  
 
   export const mockChefs: Chef[] = [
     {

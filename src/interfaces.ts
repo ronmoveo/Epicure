@@ -10,13 +10,21 @@ export interface Dish {
     isSignature: boolean;
   }
 
-export interface Restaurant {
-      id: string;
-      chef: string;
-      name: string;
-      photo: string;
-
-}
+  export interface OpeningHours {
+    day: string;
+    open: string; // "09:00" format for opening time
+    close: string; // "22:00" format for closing time
+  }
+  
+  export interface Restaurant {
+    id: string;
+    chef: string;
+    name: string;
+    rating: number;
+    photo: string;
+    openedDate: Date;
+    openingHours: OpeningHours[]; // Array of opening hours for each day
+  }
 
 export interface Chef {
   id: string;
@@ -68,6 +76,8 @@ export const stopSwiperScroll = (e: React.TouchEvent) => {
 export interface RestaurantCardProps {
   restaurant: Restaurant;
   showChef?: boolean;
+  imageHeight?: string;
+  cardHeight?: string;
 }
 
 export interface SearchBarProps {
