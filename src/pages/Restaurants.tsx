@@ -5,11 +5,13 @@ import { Restaurant } from '../interfaces';
 import FilterBar from '../components/RestaurantPage/FilterBar/FilterBar';
 import RestaurantCard from '../components/Common/RestaurantCard/RestaurantCard';
 import { handleFilterRestaurants } from '../components/RestaurantPage/restaurantFilters';
-import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS, RESTAURANTS_CARD_HEIGHT, RESTAURANTS_IMAGE_HEIGHT } from '../utils/constants';
+import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS} from '../utils/constants';
+import { Link } from 'react-router-dom';
 
 
 
 const Restaurants: React.FC = () => {
+  
   const filters = [ALL, NEW, MOST_POPULAR, OPEN_NOW];
   const [selectedFilter, setSelectedFilter] = useState(filters[0]);
   const [restaurants, setRestaurants] = useState<Restaurant[]>(mockRestaurants);
@@ -30,13 +32,12 @@ const Restaurants: React.FC = () => {
       </div>
       <div className="restaurants__grid">
         {restaurants.map(restaurant => (
-          <RestaurantCard 
-            key={restaurant.id} 
-            restaurant={restaurant} 
-            showChef={true}
-            imageHeight = {RESTAURANTS_IMAGE_HEIGHT}
-            cardHeight = {RESTAURANTS_CARD_HEIGHT}
-          />
+          <Link key={restaurant.id} to={`/restaurants/${restaurant.id}`}>
+            <RestaurantCard 
+              restaurant={restaurant} 
+              showChef={true}
+            />
+          </Link>
         ))}
       </div>
     </div>

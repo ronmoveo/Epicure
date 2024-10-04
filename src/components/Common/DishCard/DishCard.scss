@@ -1,56 +1,48 @@
+@import "src/assets/styles/_mixins.scss";
 
-@import "/src/assets/styles/_mixins.scss";
-
-.dishCard {
+.dish-card {
   background-color: $card-color;
-  width: 245px;
-  height: 388px; 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
 
-  .dishImage {
-    width: 245px;
-    height: 152px;
+  &__image {
     object-fit: cover;
   }
 
-  .dishInfo {
-    padding: 0 16px 16px 16px; 
+  &__info {
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1;
+  }
 
-    .dishName {
-      @include bold-text();
-      margin-bottom: 8px;
-      margin-top: 16px;
-      height: 29px;
-      overflow-x: auto; 
-      white-space: nowrap;
-    }
+  &__name {
+    @include bold-text();
+    margin-bottom: 8px;
+    height: 29px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 
-    .dishIngredients {
-      @include body-text;
-      width: 209px;
-      height: 100px; 
-      overflow-y: auto; 
-      margin-bottom: 16px;
-      margin-top: 0px;
-    }
+  &__ingredients {
+    @include body-text;
+    overflow-y: auto;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
 
-    .dishIcon {
-      width: 30px;
-      height: 24px;
-      margin-bottom: 4px;
-    }
+  &__icon {
+    width: 30px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
 
-    .dishPrice {
-      @include bold-text(16px);
-      letter-spacing: 1.97px;
-      margin-top: 6px; 
-      text-align: left; 
-    }
+  &__price {
+    @include bold-text(16px);
+    letter-spacing: 1.97px;
+    text-align: left;
   }
 }

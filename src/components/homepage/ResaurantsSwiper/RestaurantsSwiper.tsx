@@ -8,7 +8,11 @@ export default function RestaurantsSwiper({ restaurants, title, showChef = false
   return (
     <CommonSwiper
       items={restaurants}
-      renderItem={(restaurant) => <RestaurantCard restaurant={restaurant} showChef={showChef} />}
+      renderItem={(restaurant) => 
+      <RestaurantCard 
+      restaurant={restaurant}
+       showChef={showChef}
+      />}
       title={title}
       allLink = {RoutePaths.RESTAURANTS} 
     />

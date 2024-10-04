@@ -6,7 +6,7 @@ export interface Dish {
     ingredients: string[];
     price: number;
     icon: string;
-    type: string;
+    types: string[];
     isSignature: boolean;
   }
 
@@ -24,6 +24,7 @@ export interface Dish {
     photo: string;
     openedDate: Date;
     openingHours: OpeningHours[]; // Array of opening hours for each day
+    dishes: Dish[];
   }
 
 export interface Chef {
@@ -67,17 +68,14 @@ export interface CommonSwiperProps {
 
 export interface DishCardProps {
   dish: Dish;
+  imageWidth: number;
+  imageHeight: number;
+  cardHeight: number;
 }
-
-export const stopSwiperScroll = (e: React.TouchEvent) => {
-  e.stopPropagation();
-};
 
 export interface RestaurantCardProps {
   restaurant: Restaurant;
   showChef?: boolean;
-  imageHeight?: string;
-  cardHeight?: string;
 }
 
 export interface SearchBarProps {
@@ -93,3 +91,9 @@ export interface FilterBarProps {
   onFilterChange: (selectedFilter: string) => void;
 }
 
+export interface DishCardProps {
+  dish: Dish;
+  imageWidth: number;
+  imageHeight: number;
+  cardHeight: number;
+}

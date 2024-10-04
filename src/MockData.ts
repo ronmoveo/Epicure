@@ -22,10 +22,10 @@ export const mockDishes: Dish[] = [
       name: "Pad Ki Mao",
       isSignature: true,
       ingredients: ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili Brown Coconut"],
-      photo: "//PadKiMao.svg",
+      photo: "/PadKiMao.svg",
       price: 88,
       icon: "spicy.svg",
-      type: "dinner",
+      types: ["dinner", "lunch"],
     },
     {
       id: "2",
@@ -35,7 +35,7 @@ export const mockDishes: Dish[] = [
       photo: "/PadKiMao.svg",
       price: 95,
       icon: "vegan.svg",
-      type: "dinner",
+      types: ["dinner"],
     },
     {
       id: "3",
@@ -45,7 +45,8 @@ export const mockDishes: Dish[] = [
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "vegitarian.svg",
-      type: "dinner",
+      types: ["dinner", "lunch"],
+
     },
     {
       id: "4",
@@ -55,7 +56,8 @@ export const mockDishes: Dish[] = [
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "vegan.svg",
-      type: "dinner",
+      types: ["dinner", "lunch"],
+
     },
     {
       id: "5",
@@ -65,7 +67,8 @@ export const mockDishes: Dish[] = [
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "spicy.svg",
-      type: "dinner",
+      types: ["breakfast"],
+
     },
     {
       id: "6",
@@ -75,7 +78,8 @@ export const mockDishes: Dish[] = [
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "spicy.svg",
-      type: "dinner",
+      types: ["dinner", "lunch"],
+
     },
   ];
   
@@ -83,7 +87,7 @@ export const mockDishes: Dish[] = [
     {
       id: "r1",
       chef: "Ran Shmueli",
-      name: "Claro",
+      name: "Claro ",
       rating: 4,
       photo: "/PadKiMao.svg",
       openedDate: new Date("1997-11-12"),
@@ -95,7 +99,8 @@ export const mockDishes: Dish[] = [
         { day: "Thursday", open: "09:00", close: "22:00" },
         { day: "Friday", open: "09:00", close: "22:00" },
         { day: "Saturday", open: "10:00", close: "20:00" },
-      ]
+      ],
+      dishes: mockDishes,
     },
     {
       id: "r2",
@@ -112,7 +117,8 @@ export const mockDishes: Dish[] = [
         { day: "Thursday", open: "09:00", close: "22:00" },
         { day: "Friday", open: "09:00", close: "22:00" },
         { day: "Saturday", open: "10:00", close: "20:00" },
-      ]
+      ],
+      dishes: mockDishes,
     },
     {
       id: "r3",
@@ -129,7 +135,8 @@ export const mockDishes: Dish[] = [
         { day: "Thursday", open: "09:00", close: "22:00" },
         { day: "Friday", open: "09:00", close: "22:00" },
         { day: "Saturday", open: "10:00", close: "20:00" },
-      ]
+      ],
+      dishes: mockDishes,
     },
     {
       id: "r4",
@@ -146,7 +153,8 @@ export const mockDishes: Dish[] = [
         { day: "Thursday", open: "09:00", close: "22:00" },
         { day: "Friday", open: "09:00", close: "22:00" },
         { day: "Saturday", open: "10:00", close: "20:00" },
-      ]
+      ],
+      dishes: mockDishes,
     },
     {
       id: "r5",
@@ -163,7 +171,8 @@ export const mockDishes: Dish[] = [
         { day: "Thursday", open: "09:00", close: "22:00" },
         { day: "Friday", open: "09:00", close: "22:00" },
         { day: "Saturday", open: "10:00", close: "20:00" },
-      ]
+      ],
+      dishes: mockDishes,
     },
   ];
   

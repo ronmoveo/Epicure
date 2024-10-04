@@ -1,28 +1,26 @@
 import React from 'react';
 import './RestaurantCard.scss';
-import { RestaurantCardProps, stopSwiperScroll } from '../../../interfaces';
-
-
+import { RestaurantCardProps} from '../../../interfaces';
+import { stopSwiperScroll } from '../../../utils/constants';
 
 const RestaurantCard: React.FC<RestaurantCardProps> = ({ 
   restaurant, 
   showChef = false, 
-  imageHeight = '152px',
-  cardHeight = '232.8px'
 }) => {
   return (
-    <div className="restaurantCard" style={{ height: cardHeight }}>
+    <div 
+      className="restaurantCard" 
+    >
       <img 
         src={restaurant.photo} 
         alt={restaurant.name} 
         className="restaurantImage" 
-        style={{ height: imageHeight }}
       />
       <div className="restaurantInfo">
         <h3 className="restaurantName" onTouchMove={stopSwiperScroll}>
           {restaurant.name}
         </h3>
-        {showChef && <p className="restaurantChef">{restaurant.chef}</p>}
+        {showChef && <p className="restaurantChef" onTouchMove={stopSwiperScroll}>{restaurant.chef}</p>}
       </div>
     </div> 
   );

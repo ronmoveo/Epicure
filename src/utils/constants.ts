@@ -15,9 +15,6 @@ export const EPICURE_WORKS_WITH_THE_TOP_CHEF_RESTAURANTS_IN_TEL_AVIV = "Epicure 
 export const SIGNATURE_DISH_OF = "SIGNATURE DISH OF:";
 export const POPULAR_RESTAURANTS_IN_EPICURE = "Popular Restaurants in Epicure";
 
-export const RESTAURANTS_IMAGE_HEIGHT = "207px";
-export const RESTAURANTS_CARD_HEIGHT = "288px";
-
 
 
 export const ALL = 'All';
@@ -74,3 +71,6 @@ export const navLinks = [
   
 ];
 
+export const stopSwiperScroll = (e: React.TouchEvent) => {
+  e.stopPropagation();
+};

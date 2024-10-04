@@ -2,12 +2,12 @@
 
 .restaurantCard {
   background-color: $card-color;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   text-align: left;
-
+  width: 100%;
+  
   .restaurantImage {
     width: 100%;
     object-fit: cover;
@@ -19,18 +19,19 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-
+    
     .restaurantName {
       @include bold-text();
       margin-bottom: 8px;
-      overflow-x: auto;
-      white-space: nowrap;
+      @include horizontal-overflow;
+      max-width: 100%; 
     }
 
     .restaurantChef {
       @include body-text;
       margin-top: 0px;
+      @include horizontal-overflow;
+      max-width: 100%; 
     }
   }
 }
