@@ -6,6 +6,7 @@ import DishIconsList from '../components/homepage/DishIconsList/DishIconsList';
 import AboutUs from '../components/homepage/AboutUs/AboutUs';
 import RestaurantsSwiper from '../components/homepage/ResaurantsSwiper/RestaurantsSwiper';
 import ChefOfTheWeek from '../components/homepage/ChefOfTheweek/ChefOfTheweek';
+import { POPULAR_RESTAURANTS_IN_EPICURE } from '../utils/constants';
 
 
 const Home: React.FC = () => {
@@ -15,7 +16,7 @@ const Home: React.FC = () => {
   return (
     <div className="home">
       <Hero/>
-      <RestaurantsSwiper restaurants={mockRestaurants} title='POPULAR RESTAURANT IN EPICURE:' showChef/>
+      <RestaurantsSwiper restaurants={mockRestaurants} title={POPULAR_RESTAURANTS_IN_EPICURE} showChef/>
       <DishSwiper dishes={mockDishes} />
       <DishIconsList/>
       {yossiShitrit && <ChefOfTheWeek chef={yossiShitrit} />}

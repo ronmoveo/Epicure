@@ -24,6 +24,10 @@
       gap: 20px;
       justify-items: center;
       padding-right: 5.72px;
+
+      @include md {
+        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+      }
                                                                                                                                                 
       a {
         text-decoration: none;
@@ -38,9 +42,7 @@
         height: 209px;
       }
   
-      @include md {
-        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
-      }
+
     }
   }
 

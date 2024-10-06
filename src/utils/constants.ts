@@ -13,9 +13,14 @@ export const CHEF_OF_THE_WEEK = "CHEF OF THE WEEK:";
 export const THE_MEANING_OF_OUR_ICONS = "THE MEANING OF OUR ICONS:";
 export const EPICURE_WORKS_WITH_THE_TOP_CHEF_RESTAURANTS_IN_TEL_AVIV = "Epicure works with the top chef restaurants in Tel Aviv";
 export const SIGNATURE_DISH_OF = "SIGNATURE DISH OF:";
-export const POPULAR_RESTAURANTS_IN_EPICURE = "Popular Restaurants in Epicure";
+export const POPULAR_RESTAURANTS_IN_EPICURE = "POPULAR RESTAURANTS IN EPICURE:";
+
+export const CURRENCY_SYMBOL = "₪";
 
 
+export const BREAKFAST = "Breakfast";
+export const LUNCH = "Lunch";
+export const DINNER = "Dinner";
 
 export const ALL = 'All';
 export const NEW = 'New';
@@ -54,6 +59,8 @@ export const SWIPER_PROPS: SwiperOptions = {
   mousewheel: true,
   modules: [Mousewheel, FreeMode],
   centeredSlides: false,
+  slidesOffsetBefore: 20,
+  slidesOffsetAfter: 20,
 };
 
 export const footerLinks = [

@@ -8,6 +8,9 @@ export interface Dish {
     icon: string;
     types: string[];
     isSignature: boolean;
+    sideDish: string[];
+    changes: string[];
+    quantity: number;
   }
 
   export interface OpeningHours {
@@ -66,13 +69,6 @@ export interface CommonSwiperProps {
   allLink?: string;
 }
 
-export interface DishCardProps {
-  dish: Dish;
-  imageWidth: number;
-  imageHeight: number;
-  cardHeight: number;
-}
-
 export interface RestaurantCardProps {
   restaurant: Restaurant;
   showChef?: boolean;
@@ -93,7 +89,13 @@ export interface FilterBarProps {
 
 export interface DishCardProps {
   dish: Dish;
-  imageWidth: number;
-  imageHeight: number;
-  cardHeight: number;
+  onClick?: () => void;
+}
+
+
+
+export interface DishModalProps {
+  dish: Dish;
+  onClose: () => void;
+  onAddToCart: (dish: Dish) => void;
 }

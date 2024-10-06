@@ -11,8 +11,6 @@ const CommonSwiper: React.FC<CommonSwiperProps> = ({ items, renderItem, title, a
       <div className="swiperWrapper">
         <Swiper 
           {...SWIPER_PROPS}
-          slidesOffsetBefore={20}
-          slidesOffsetAfter={20}
         >
           {items.map((item) => (
             <SwiperSlide key={item.id}>{renderItem(item)}</SwiperSlide>
