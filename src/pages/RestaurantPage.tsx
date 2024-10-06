@@ -7,6 +7,8 @@ import DishCard from '../components/Common/DishCard/DishCard';
 import FilterBar from '../components/RestaurantPage/FilterBar/FilterBar';
 import { BREAKFAST, LUNCH, DINNER, OPEN_NOW } from '../utils/constants';
 import DishModal from '../components/RestaurantPage/DishModal/DishModal';
+import { useCart } from '../cartContext';
+
 
 const RestaurantPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -14,7 +16,7 @@ const RestaurantPage: React.FC = () => {
   const [filteredDishes, setFilteredDishes] = useState<Dish[]>([]);
   const [selectedFilter, setSelectedFilter] = useState<string>('dinner');
   const [selectedDish, setSelectedDish] = useState<Dish | null>(null);
-  const [cart, setCart] = useState<Dish[]>([]); 
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const foundRestaurant = mockRestaurants.find(r => r.id === id);
@@ -33,15 +35,22 @@ const RestaurantPage: React.FC = () => {
   };
 
   const handleDishClick = (dish: Dish) => {
-    setSelectedDish(dish); 
+    setSelectedDish(dish);
   };
 
   const handleAddToCart = (dish: Dish) => {
-    setCart([...cart, dish]);
+    if (restaurant) {
+      addToCart({
+        ...dish,
+        restaurantId: restaurant.id,
+        restaurantName: restaurant.name,
+      });
+    }
+    setSelectedDish(null);
   };
 
   const handleModalClose = () => {
-    setSelectedDish(null); 
+    setSelectedDish(null);
   };
 
   if (!restaurant) return null;

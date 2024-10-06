@@ -35,10 +35,19 @@
 
 @mixin bold-text($size: 18px) {
   font-family: $primary-font;                               
-  font-weight: $primary-weight;
   color: $primary-color;
   font-size: $size;
   font-weight: 400;
+}
+
+@mixin body-text($size: 16px) {
+  color: $primary-color;
+  font-family: $primary-font;
+  font-weight: $primary-weight;
+  font-size: $size;
+  line-height: 20px;
+  letter-spacing: 1.97px;
+  text-align: left;
 }
 
 @mixin icon-small() {
@@ -58,15 +67,7 @@
 }
 
 
-@mixin body-text($size: 16px) {
-  color: $primary-color;
-  font-family: $primary-font;
-  font-weight: $primary-weight;
-  font-size: $size;
-  line-height: 20px;
-  letter-spacing: 1.97px;
-  text-align: left;
-}
+
 
 // @mixin flex-center {
 //   display: flex;
@@ -79,13 +80,6 @@
   cursor: pointer;
   background-color: transparent;
   border: none;
-  //display: inline-block;
-  
-  //color: $primary-color;
-  
-  //border-radius: 4px;
-  
-  //transition: background-color 0.3s ease;
 }
 
 

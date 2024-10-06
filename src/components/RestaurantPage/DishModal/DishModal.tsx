@@ -32,6 +32,8 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
     onClose();
   };
 
+  
+
   const handleScroll = () => {
     if (contentRef.current) {
       const { scrollTop, scrollHeight, clientHeight } = contentRef.current;
@@ -99,6 +101,7 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
               <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>
                 <img src="/minus.svg" alt="Decrease quantity"  />
               </button>
+
               <span>{quantity}</span>
               <button onClick={() => setQuantity(quantity + 1)}>
                 <img src="/plus.svg" alt="Increase quantity"  />
