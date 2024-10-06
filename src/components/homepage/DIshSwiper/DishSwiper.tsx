@@ -7,18 +7,17 @@ import { RoutePaths } from '../../../utils/enum';
 
 export default function DishSwiper({ dishes }: DishSwiperProps) {
   return (
+    <div className='DishSwiper'>
     <CommonSwiper
       items={dishes}
       renderItem={(dish) => (
         <DishCard 
           dish={dish} 
-          imageWidth={245}
-          imageHeight={152}
-          cardHeight={388}
         />
       )}
       title={SIGNATURE_DISH_OF}
       allLink={RoutePaths.RESTAURANTS}
     />
+    </div>
   );
 }

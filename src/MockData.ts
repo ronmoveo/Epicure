@@ -26,6 +26,9 @@ export const mockDishes: Dish[] = [
       price: 88,
       icon: "spicy.svg",
       types: ["dinner", "lunch"],
+      sideDish: ["White bread", "Sticky rice", "pasta"],
+      changes: ["Without Peanuts", "Sticky Less spicy"],
+      quantity: 1,
     },
     {
       id: "2",
@@ -36,6 +39,9 @@ export const mockDishes: Dish[] = [
       price: 95,
       icon: "vegan.svg",
       types: ["dinner"],
+      sideDish: ["White bread", "Sticky rice"],
+      changes: ["Without Peanuts", "Sticky Less spicy"],
+      quantity: 1,
     },
     {
       id: "3",
@@ -46,6 +52,9 @@ export const mockDishes: Dish[] = [
       price: 78,
       icon: "vegitarian.svg",
       types: ["dinner", "lunch"],
+      sideDish: ["White bread", "Sticky rice"],
+      changes: ["Without Peanuts", "Sticky Less spicy"],
+      quantity: 1,
 
     },
     {
@@ -57,6 +66,9 @@ export const mockDishes: Dish[] = [
       price: 78,
       icon: "vegan.svg",
       types: ["dinner", "lunch"],
+      sideDish: ["White bread", "Sticky rice"],
+      changes: ["Without Peanuts", "Sticky Less spicy"],
+      quantity: 1,
 
     },
     {
@@ -68,17 +80,23 @@ export const mockDishes: Dish[] = [
       price: 78,
       icon: "spicy.svg",
       types: ["breakfast"],
+      sideDish: ["White bread", "Sticky rice"],
+      changes: ["Without Peanuts", "Sticky Less spicy"],
+      quantity: 1,
 
     },
     {
       id: "6",
       name: "Sushi",
       isSignature: true,
-      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime",],
+      ingredients: ["Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass", "Galangal", "Chili", "Lime","Shrimps", "Lemongrass"],
       photo: "/PadKiMao.svg",
       price: 78,
       icon: "spicy.svg",
       types: ["dinner", "lunch"],
+      sideDish: ["White bread", "Sticky rice"],
+      changes: ["Without Peanuts", "Sticky Less spicy"],
+      quantity: 1,
 
     },
   ];
@@ -87,7 +105,7 @@ export const mockDishes: Dish[] = [
     {
       id: "r1",
       chef: "Ran Shmueli",
-      name: "Claro ",
+      name: "Nitan Thai",
       rating: 4,
       photo: "/PadKiMao.svg",
       openedDate: new Date("1997-11-12"),
@@ -159,7 +177,7 @@ export const mockDishes: Dish[] = [
     {
       id: "r5",
       chef: "Shahaf Shabtay",
-      name: "Nitan Thai",
+      name: "Nitan Thai ",
       rating: 5,
       photo: "/nithan-thai.svg",
       openedDate: new Date("2003-11-12"),

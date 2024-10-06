@@ -1,0 +1,75 @@
+@import "../assets/styles/_mixins.scss";
+
+.restaurant-page {
+  &__header {
+    margin-bottom: 44px;
+
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 273px;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 24px 20px 32px;
+    
+  }
+
+  &__name {
+    @include bold-text();
+    margin-bottom: 8px;
+    @include horizontal-overflow;
+    
+  }
+
+  &__chef {
+    @include body-text;
+    margin-bottom: 8px;
+    @include horizontal-overflow;
+   
+  }
+
+  &__status {
+    @include body-text;
+  }
+
+  &__dishes {
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-items: center;
+    gap: 20px;
+    padding: 22px;
+ 
+  }
+
+  .dish-card__icon{
+    display: none;
+  }
+  
+  .filter-bar{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .dish-card{
+    width: 335px;
+    height: 375px;
+  
+  }
+  
+  .dish-card__image{
+    height: 211px;
+  
+  }
+  
+
+  @include md {
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  }
+}
+
+

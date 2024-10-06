@@ -37,12 +37,24 @@
   &__icon {
     width: 30px;
     height: 24px;
-    margin-bottom: 4px;
   }
 
   &__price {
     @include bold-text(16px);
     letter-spacing: 1.97px;
     text-align: left;
+  }
+
+  &__bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    width: 100%;
+
+    .dish-card__divider {
+      flex-grow: 1;  
+      border-bottom: 0.5px solid #979797;
+      margin-left: 10px; 
+    }
   }
 }
