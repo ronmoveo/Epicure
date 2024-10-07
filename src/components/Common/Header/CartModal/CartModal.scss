@@ -26,7 +26,7 @@
 
   &__restaurant {
     @include text(18px);
-    line-height: 20px;
+    line-height: 22px;
     letter-spacing: 1.97px;
     margin-bottom: 20px;
     @include horizontal-overflow;
@@ -47,14 +47,23 @@
   }
 
   &__image-wrapper {
-    width: 45px;
-    height: 45px;
+    @include icon-size(49px);
     margin-bottom: 16px;
+  }
+
+  &__image {
+    width: 100%; 
+    height: 100%;
   }
 
   &__text {
     @include text(16px);
+    line-height: 22px;
+    letter-spacing: 1.97px;
     text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    
   }
 
   &__item {
@@ -166,3 +175,5 @@
     line-height: 9.77px;
   }
 }
+
+

@@ -14,6 +14,12 @@ export const THE_MEANING_OF_OUR_ICONS = "THE MEANING OF OUR ICONS:";
 export const EPICURE_WORKS_WITH_THE_TOP_CHEF_RESTAURANTS_IN_TEL_AVIV = "Epicure works with the top chef restaurants in Tel Aviv";
 export const SIGNATURE_DISH_OF = "SIGNATURE DISH OF:";
 export const POPULAR_RESTAURANTS_IN_EPICURE = "POPULAR RESTAURANTS IN EPICURE:";
+export const MY_ORDER = "MY ORDER";
+export const CHECKOUT = "CHECKOUT";
+export const TOTAL = "TOTAL -"
+export const CHANGES= "Changes";
+export const ADD_TO_BAG = "Add to bag";
+export const QUANTITY = "Quantity";
 
 export const CURRENCY_SYMBOL = "₪";
 

@@ -1,28 +1,10 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { Dish } from './interfaces';
-
-
-interface CartItem extends Dish {
-  restaurantId: string;
-  restaurantName: string;
-  quantity: number;
-}
-
-interface CartContextType {
-  cartItems: CartItem[];
-  addToCart: (item: CartItem) => void;
-  removeFromCart: (itemId: string) => void;
-  clearCart: () => void;
-  cartCount: number;
-}
+import { CartContextType, CartItem, CartProviderProps} from './interfaces';
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-interface CartProviderProps {
-  children: React.ReactNode;
-}
+const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
 
-export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [cartCount, setCartCount] = useState(0);
 
@@ -50,7 +32,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
       }
     });
   };
-  
+
   const removeFromCart = (itemId: string) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
@@ -75,3 +57,6 @@ export const useCart = () => {
   }
   return context;
 };
+
+
+export default CartProvider;

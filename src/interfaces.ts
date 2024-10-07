@@ -99,3 +99,21 @@ export interface DishModalProps {
   onClose: () => void;
   onAddToCart: (dish: Dish) => void;
 }
+
+export interface CartItem extends Dish {
+  restaurantId: string;
+  restaurantName: string;
+}
+
+export interface CartContextType {
+  cartItems: CartItem[];
+  addToCart: (item: CartItem) => void;
+  removeFromCart: (itemId: string) => void;
+  clearCart: () => void;
+  cartCount: number;
+}
+
+
+export interface CartProviderProps {
+  children: React.ReactNode;
+}
