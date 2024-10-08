@@ -3,6 +3,7 @@ import {ChefOfTheWeekProps } from '../../../interfaces';
 import RestaurantsSwiper from '../ResaurantsSwiper/RestaurantsSwiper';
 import './ChefOfTheWeek.scss';
 import { CHEF_OF_THE_WEEK } from '../../../utils/constants';
+import ChefCard from '../../Common/ChefCard/ChefCard';
 
 
 
@@ -11,10 +12,7 @@ const ChefOfTheWeek: React.FC <ChefOfTheWeekProps> = ({ chef }) => {
     <section className="chef-of-the-week">
       <h2 className="section-title">{CHEF_OF_THE_WEEK}</h2>
       <div className="chef-info">
-        <div className="chef-photo-container">
-          <img src={chef.photo} alt={chef.name} className="chef-photo" />
-          <div className="chef-name-label">{chef.name}</div>
-        </div>
+      <ChefCard photo={chef.photo} name={chef.name} />
       </div>
       <p className="chef-about">{chef.about}</p>
       <RestaurantsSwiper 

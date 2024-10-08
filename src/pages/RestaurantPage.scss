@@ -2,8 +2,7 @@
 
 .restaurant-page {
   &__header {
-    margin-bottom: 44px;
-
+    margin-bottom: 29px;
   }
 
   &__image {
@@ -16,25 +15,62 @@
 
   &__info {
     padding: 24px 20px 32px;
-    
+
+    @include md {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__name {
     @include bold-text();
-    margin-bottom: 8px;
-    @include horizontal-overflow;
-    
+    margin-bottom: 14px;
+
+    @include md {
+      font-size: 56px;
+      line-height: 64px;
+      letter-spacing: 3.67px;
+      margin-bottom: 4px;
+    }
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    overflow: auto;
+  
   }
 
   &__chef {
     @include body-text;
-    margin-bottom: 8px;
-    @include horizontal-overflow;
-   
+    margin-bottom: 16px;
+    max-width: 100%;
+    
+    @include md{
+      font-size: 32px;
+      margin-bottom: 32px;
+      line-height: 36px;
+
+    }
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    overflow: auto;
+
   }
 
   &__status {
     @include body-text;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__status-icon {
+    @include icon-size(17px);
   }
 
   &__dishes {
@@ -43,31 +79,69 @@
     justify-items: center;
     gap: 20px;
     padding: 22px;
- 
+    padding-top: 0;
+
+    
+
+    @include md {
+      grid-template-columns: repeat(auto-fill, minmax(272px, 1fr));
+    }
+
+    @include lg {
+      grid-template-columns: repeat(3, minmax(272px, 1fr));
+    }
+
+    @include xl {
+      grid-template-columns: repeat(4, minmax(272px, 1fr));
+    }
   }
 
-  .dish-card__icon{
+  .dish-card__icon {
     display: none;
   }
+
+  .dish-card__name{
+    @include md {
+      text-align: center;
+    }
+  }
+
+  .dish-card__ingredients{
+    @include md {
+      text-align: center;
   
-  .filter-bar{
+    }
+  }
+
+  .filter-bar {
+    padding: 0px;
     margin-left: 20px;
     margin-right: 20px;
+    max-width: 100%; 
+
+
+    @include md {
+      margin: 0 auto; 
+      width: fit-content; 
+    }
+    
   }
-  
-  .dish-card{
+
+  .dish-card {
     width: 335px;
     height: 375px;
-  
-  }
-  
-  .dish-card__image{
-    height: 211px;
-  
-  }
-  
 
-  @include md {
-    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    @include md {
+      width: 272px;
+      height: 413px;
+    }
+  }
+
+  .dish-card__image {
+    height: 211px;
+
+    @include md {
+      height: 172px;
+    }
   }
 }

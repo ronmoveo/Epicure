@@ -15,13 +15,12 @@ export const filterOpenNow = (restaurants: Restaurant[]): Restaurant[] => {
 export const filterMostPopular = (restaurants: Restaurant[]): Restaurant[] => {
   return restaurants
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, 3);
 };
 
 export const filterNewRestaurants = (restaurants: Restaurant[]): Restaurant[] => {
   return restaurants
     .sort((a, b) => new Date(b.openedDate).getTime() - new Date(a.openedDate).getTime())
-    .slice(0, 3);
+
 };
 
 

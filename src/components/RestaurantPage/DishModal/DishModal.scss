@@ -5,31 +5,26 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     z-index: 1000;
-    
 
     &__content {
-        background: white;
+        background: $primary-white;
         width: 100%;
-        max-width: 375px;
         height: 100%;
-        max-height: 100vh;
         display: flex;
         flex-direction: column;
         overflow-y: auto;
-        
     }
 
     &__header {
         height: 46px;
         position: relative;
-        background: white;
-
+        background: $primary-white;
     }
 
     &__close {
@@ -49,9 +44,7 @@
 
     &__image-container {
         width: 100%;
-        height: 271px; 
-        padding-top: 46px;
-        
+        height: 271px;     
     }
 
     &__image {
@@ -66,20 +59,26 @@
 
     &__name {
         @include bold-text();
-        @include horizontal-overflow;
-        margin-bottom: 8px;
+        margin-bottom: 14px;
+        display: -webkit-box;
+        max-height: calc(2 * 1.2em); 
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include vertical-overflow;
     }
 
+
     &__ingredients-container {
-        height: 40px;
+        height: auto;
         overflow-y: auto;
         margin-bottom: 24px;
+        max-height: calc(4 * 1.1em);
+        @include vertical-overflow;
         
     }
 
     &__ingredients {
         @include body-text;
-        
     }
 
     &__section {
@@ -102,7 +101,6 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
-        
     }
 
     &__radio,
@@ -113,7 +111,6 @@
         align-items: center;
         cursor: pointer;
         @include horizontal-overflow;
-
 
         input {
             margin-right: 12px;
@@ -162,14 +159,12 @@
             height: 36px;
             border: none;
             background: $primary-white;
-
             cursor: pointer;
 
             img {
                 width: 19px; 
                 height: 20px;
-              }
-            
+            }
         }
 
         span {
@@ -189,8 +184,6 @@
         cursor: pointer;
         padding-bottom: 48px;
         margin-left: 20px;
-        margin-bottom: 48px;
-        
+        margin-bottom: 32px;
     }
-    
 }

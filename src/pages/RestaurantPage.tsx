@@ -5,18 +5,22 @@ import { Restaurant, Dish } from '../interfaces';
 import { mockRestaurants } from '../mockData';
 import DishCard from '../components/Common/DishCard/DishCard';
 import FilterBar from '../components/RestaurantPage/FilterBar/FilterBar';
-import { BREAKFAST, LUNCH, DINNER, OPEN_NOW } from '../utils/constants';
+import { BREAKFAST, LUNCH, DINNER, OPEN_NOW, CLOSED } from '../utils/constants';
 import DishModal from '../components/RestaurantPage/DishModal/DishModal';
 import { useCart } from '../cartContext';
+import { filterOpenNow } from '../components/RestaurantPage/restaurantFilters';
 
 
 const RestaurantPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [restaurant, setRestaurant] = useState<Restaurant | null>(null);
   const [filteredDishes, setFilteredDishes] = useState<Dish[]>([]);
-  const [selectedFilter, setSelectedFilter] = useState<string>('dinner');
+  const [selectedFilter, setSelectedFilter] = useState<string>(BREAKFAST);
   const [selectedDish, setSelectedDish] = useState<Dish | null>(null);
   const { addToCart } = useCart();
+
+  const isOpenNow = restaurant ? filterOpenNow([restaurant]).length > 0 : false;
+
 
   useEffect(() => {
     const foundRestaurant = mockRestaurants.find(r => r.id === id);
@@ -24,7 +28,7 @@ const RestaurantPage: React.FC = () => {
       setRestaurant(foundRestaurant);
       setFilteredDishes(
         foundRestaurant.dishes.filter(dish =>
-          dish.types.includes(selectedFilter)
+          dish.types.includes(selectedFilter.toLowerCase())
         )
       );
     }
@@ -64,7 +68,10 @@ const RestaurantPage: React.FC = () => {
         <div className="restaurant-page__info">
           <h1 className="restaurant-page__name">{restaurant.name}</h1>
           <p className="restaurant-page__chef">{restaurant.chef}</p>
-          <p className="restaurant-page__status">{OPEN_NOW}</p>
+          <div className="restaurant-page__status">
+            <img src="/clock.svg" alt="Clock Icon" className="restaurant-page__status-icon" />
+            {isOpenNow ? OPEN_NOW : CLOSED}
+          </div>
         </div>
         <FilterBar 
           filters={[BREAKFAST, LUNCH, DINNER]}

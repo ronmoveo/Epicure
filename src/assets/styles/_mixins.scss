@@ -60,20 +60,16 @@
   width: $size;
   height: $size;
 }
-
-@mixin horizontal-overflow() {
+@mixin horizontal-overflow {
   overflow-x: auto;
   white-space: nowrap;
+
 }
 
-
-
-
-// @mixin flex-center {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
+@mixin vertical-overflow{
+  overflow-y: auto;
+ 
+}
 
 
 @mixin button() {

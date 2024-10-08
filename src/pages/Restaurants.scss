@@ -24,9 +24,14 @@
       gap: 20px;
       justify-items: center;
       padding-right: 5.72px;
+      
 
       @include md {
-        grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+      }
+
+      @include xl{
+        grid-template-columns: repeat(3, minmax(335px, 1fr));
       }
                                                                                                                                                 
       a {
@@ -41,9 +46,10 @@
       .restaurantImage{
         height: 209px;
       }
-  
+    
 
     }
+    
   }
 
 

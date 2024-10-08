@@ -23,15 +23,15 @@
     @include bold-text();
     margin-bottom: 8px;
     height: 29px;
-    overflow-x: auto;
-    white-space: nowrap;
+    @include horizontal-overflow;
   }
 
   &__ingredients {
     @include body-text;
-    overflow-y: auto;
+    @include vertical-overflow;
     margin-bottom: 16px;
     flex-grow: 1;
+    height: 60px;
   }
 
   &__icon {
@@ -50,10 +50,11 @@
     align-items: center;
     justify-content: space-between;  
     width: 100%;
+    margin-bottom: 16px;
 
     .dish-card__divider {
       flex-grow: 1;  
-      border-bottom: 0.5px solid #979797;
+      border-bottom: 0.5px solid $secondary-gray;
       margin-left: 10px; 
     }
   }
