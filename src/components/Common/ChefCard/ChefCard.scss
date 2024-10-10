@@ -1,0 +1,30 @@
+@import "src/assets/styles/_mixins.scss";
+
+.chef-card {
+    .chef-photo-container {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+
+        .chef-photo {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .chef-name-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $label-color;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}

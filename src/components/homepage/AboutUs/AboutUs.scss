@@ -1,0 +1,18 @@
+@import "src/assets/styles/_mixins.scss";
+
+.AboutUs {
+  margin-top: 48px;
+  padding: 20px;
+  background-color: $primary-gray;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+
+  .Logo {
+    width: 102px;
+    height: 95px;
+    margin-bottom: 20px;
+  }
+}
