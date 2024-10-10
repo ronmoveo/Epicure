@@ -34,6 +34,8 @@ const RestaurantPage: React.FC = () => {
     }
   }, [id, selectedFilter]);
 
+  
+
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter.toLowerCase());
   };

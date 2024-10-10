@@ -15,29 +15,6 @@
   .chef-info {
     margin-bottom: 20px;
     padding: 0 20px;
-
-    .chef-photo-container {
-      width: 335px;
-      height: 262;
-
-      .chef-name-label{        
-        padding: 0;
-        width: 478px;
-        height: 51px;
-        @include md{
-          height: 78px; 
-        }
-      }
-
-      .chef-photo{
-        @include md {
-          height: 372px;  
-          width:  478px;
-        }
-      }
-
-     
-    }
   }
 
   .chef-about {
@@ -50,23 +27,5 @@
     padding: 0 20px;
   }
 
-  @include md {
-    .restaurantCard {
-      width: 231px;
-      height: 357px;
 
-      .restaurantImage {
-        width: 231px;
-        height: 224px;
-      }
-
-      .restaurantName {
-        font-size: 30px;
-        text-align: center;
-        margin-top: 4px;
-      }
-    }
-
-
-  }
 }

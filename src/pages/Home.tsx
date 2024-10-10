@@ -13,11 +13,14 @@ const Home: React.FC = () => {
   
   const yossiShitrit = mockChefs.find(chef => chef.name === "Yossi Shitrit");
 
+  const signatureDishes = mockDishes.filter(dish => dish.isSignature);
+
+
   return (
     <div className="home">
       <Hero/>
       <RestaurantsSwiper restaurants={mockRestaurants} title={POPULAR_RESTAURANTS_IN_EPICURE} showChef/>
-      <DishSwiper dishes={mockDishes} />
+      <DishSwiper dishes={signatureDishes} />
       <DishIconsList/>
       {yossiShitrit && <ChefOfTheWeek chef={yossiShitrit} />}
       <AboutUs />

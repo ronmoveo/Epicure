@@ -1,41 +1,35 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import './Restaurants.scss';
 import { mockRestaurants } from '../mockData';
 import { Restaurant } from '../interfaces';
 import FilterBar from '../components/RestaurantPage/FilterBar/FilterBar';
 import RestaurantCard from '../components/Common/RestaurantCard/RestaurantCard';
 import { handleFilterRestaurants } from '../components/RestaurantPage/restaurantFilters';
-import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS} from '../utils/constants';
+import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import Pagination from '../components/Common/Pagination/Pagination';
 
-
-
-
 const Restaurants: React.FC = () => {
-  
   const filters = [ALL, NEW, MOST_POPULAR, OPEN_NOW];
   const [selectedFilter, setSelectedFilter] = useState(filters[0]);
   const [restaurants, setRestaurants] = useState<Restaurant[]>(mockRestaurants);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
-
   const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
     const filteredRestaurants = handleFilterRestaurants(filter, mockRestaurants);
     setRestaurants(filteredRestaurants);
-    setCurrentPage(1);
+    setCurrentPage(1); 
   };
 
   const handlePageChange = ({ selected }: { selected: number }) => {
-    setCurrentPage(selected+ 1);
+    setCurrentPage(selected + 1);
   };
 
-  const startIndex = (currentPage -1) * itemsPerPage;
+  const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedRestaurants = restaurants.slice(startIndex, startIndex + itemsPerPage);
   const pageCount = Math.ceil(restaurants.length / itemsPerPage);
-
 
   return (
     <div className="restaurants">
@@ -46,14 +40,15 @@ const Restaurants: React.FC = () => {
       <div className="restaurants__grid">
         {paginatedRestaurants.map((restaurant) => (
           <Link key={restaurant.id} to={`/restaurants/${restaurant.id}`}>
-            <RestaurantCard 
-              restaurant={restaurant} 
-              showChef={true}
-            />
+            <RestaurantCard restaurant={restaurant} showChef={true} />
           </Link>
         ))}
       </div>
-      <Pagination pageCount={pageCount} onPageChange={handlePageChange} />
+      <Pagination 
+        pageCount={pageCount} 
+        onPageChange={handlePageChange} 
+        currentPage={currentPage} 
+      />
     </div>
   );
 };

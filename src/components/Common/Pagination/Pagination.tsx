@@ -5,9 +5,10 @@ import './Pagination.scss';
 interface PaginationProps {
   pageCount: number;
   onPageChange: (selectedItem: { selected: number }) => void;
+  currentPage: number;  // Add currentPage as a prop
 }
 
-const Pagination: React.FC<PaginationProps> = ({ pageCount, onPageChange }) => {
+const Pagination: React.FC<PaginationProps> = ({ pageCount, onPageChange, currentPage }) => {
   return (
     <div className="pagination-container">
       <ReactPaginate
@@ -21,6 +22,7 @@ const Pagination: React.FC<PaginationProps> = ({ pageCount, onPageChange }) => {
         onPageChange={onPageChange}
         containerClassName={'pagination'}
         activeClassName={'active'}
+        forcePage={currentPage - 1}  // Add forcePage prop, subtract 1 since it's zero-based
       />
     </div>
   );
