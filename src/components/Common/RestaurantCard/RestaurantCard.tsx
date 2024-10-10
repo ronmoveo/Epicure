@@ -11,7 +11,7 @@ const RestaurantCard: React.FC<RestaurantCardProps> = ({
 }) => {
   return (
     <Link 
-      to={`${RoutePaths.RESTAURANT}/${restaurant.id}`} // Use Link for navigation
+      to={`${RoutePaths.RESTAURANT}/${restaurant.id}`} 
       className="restaurantCard"
     >
       <img 

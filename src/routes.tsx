@@ -12,7 +12,7 @@ const routes = createBrowserRouter([
     children: [
       { path: RoutePaths.HOME, element: <Home /> }, 
       { path: RoutePaths.RESTAURANTS, element: <Restaurants /> },
-      { path: `${RoutePaths.RESTAURANT}/:id`, element: <RestaurantPage /> }, // Ensure this matches the path
+      { path: `${RoutePaths.RESTAURANT}/:id`, element: <RestaurantPage /> }, 
     ],
   },
 ]);

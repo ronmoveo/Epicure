@@ -14,7 +14,7 @@
     
 
     &__content {
-        background: white;
+        background: $primary-white;
         width: 100%;
         max-width: 375px;
         height: 100%;
@@ -28,7 +28,7 @@
     &__header {
         height: 46px;
         position: relative;
-        background: white;
+        background:  $primary-white;
 
     }
 
@@ -93,7 +93,7 @@
             padding-bottom: 8px;
             text-decoration: underline;
             text-decoration-thickness: 1px;
-            text-decoration-color: #DE9200E5;
+            text-decoration-color: $primary-orange;
             text-underline-offset: 8px;
         }
     }
@@ -131,8 +131,8 @@
         cursor: pointer;
 
         &:checked {
-            background-color: #de9200;
-            border-color: #de9200;
+            background-color: $primary-orange;
+            border-color: $primary-orange;
         }
     }
 
@@ -147,8 +147,8 @@
         cursor: pointer;
 
         &:checked {
-            background-color: #de9200;
-            border-color: #de9200;
+            background-color: $primary-orange;
+            border-color: $primary-orange;
         }
     }
 

@@ -117,3 +117,9 @@ export interface CartContextType {
 export interface CartProviderProps {
   children: React.ReactNode;
 }
+
+export interface PaginationProps {
+  pageCount: number;
+  onPageChange: (selectedItem: { selected: number }) => void;
+  currentPage: number;  
+}
