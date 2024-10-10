@@ -41,24 +41,19 @@
 
   &__logo {
     img {
-      width: 31px;
+      width: 33px;
       height: 32px;
-
-      @include lg {
-        width: 33px;
-        height: 33px;
-      }
     }
   }
 
   &__title {
-    @include text(27px);
-    line-height: 32.64px;
-    letter-spacing: 1.35px;
-    margin-left: 15px;
     display: none;
 
     @include lg {
+      @include text(27px);
+      line-height: 32.64px;
+      letter-spacing: 1.35px;
+      margin-left: 15px;
       display: block;
     }
   }
@@ -85,6 +80,10 @@
     }
   }
 
+  &__nav-link--active {
+    border-bottom: 1.8px solid $primary-orange;
+  }
+
   &__actions {
     display: flex;
     gap: 20px;
@@ -103,3 +102,5 @@
     }
   }
 }
+
+

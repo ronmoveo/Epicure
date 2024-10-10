@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.scss';
 import NavBar from './NavBar/NavBar';
 import CartModal from './CartModal/CartModal';
 import SearchModal from './SearchModal/SearchModal';
 import { RoutePaths } from '../../../utils/enum';
+import { CHEFS, EPICURE, RESTAURANTS } from '../../../utils/constants';
 
 const Header: React.FC = () => (
   <header className="header">
@@ -12,19 +13,27 @@ const Header: React.FC = () => (
       <NavBar />
     </div>
     <div className="header__content">
-      <Link to={RoutePaths.HOME} className="header__logo">
+      <NavLink to={RoutePaths.HOME} className="header__logo">
         <img src="/logo.svg" alt="Epicure Logo" />
-      </Link>
-      <Link to={RoutePaths.HOME} className="header__title">
-        EPICURE
-      </Link>
+      </NavLink>
+      <NavLink to={RoutePaths.HOME} className="header__title">
+        {EPICURE}
+      </NavLink>
       <nav className="header__nav">
-        <Link to={RoutePaths.RESTAURANTS} className="header__nav-link">
-          Restaurants
-        </Link>
-        <Link to={RoutePaths.RESTAURANTS} className="header__nav-link">
-          Chefs
-        </Link>
+        <NavLink
+          to={RoutePaths.RESTAURANTS}
+          className={({ isActive }) =>
+            isActive ? "header__nav-link header__nav-link--active" : "header__nav-link"}
+        >
+          {RESTAURANTS}
+        </NavLink>
+        <NavLink
+          to={RoutePaths.RESTAURANT}
+          className={({ isActive }) =>
+            isActive ? "header__nav-link header__nav-link--active" : "header__nav-link"}
+        >
+          {CHEFS}
+        </NavLink>
       </nav>
     </div>
     <div className="header__actions">

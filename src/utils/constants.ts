@@ -21,6 +21,8 @@ export const CHANGES= "Changes";
 export const ADD_TO_BAG = "Add to bag";
 export const QUANTITY = "Quantity";
 export const CLOSED = "Closed";
+export const EPICURE = "EPICURE";
+export const CHEFS = "Chefs"
 
 export const CURRENCY_SYMBOL = "₪";
 
