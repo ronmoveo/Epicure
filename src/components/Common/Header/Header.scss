@@ -8,43 +8,98 @@
   left: 0;
   right: 0;
   height: 46px;
-  z-index: 1000; // ensures other content stay underneath the header 
-  
-  
-  &__menu-button {
-    padding: 10px 20px;
-    @include button();
-    @include icon-size(24px);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  @include lg {
+    height: 64px;
+    padding-left: 127px;
+  }
+
+  &__mobile-menu {
+   
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include lg {
+      position: static;
+      transform: none;
+    }
   }
 
   &__logo {
-    position: absolute;
-    left: calc(50% - 16.5px); 
-    top: 7px;
-
     img {
-      width: 33px;
+      width: 31px;
       height: 32px;
+
+      @include lg {
+        width: 33px;
+        height: 33px;
+      }
+    }
+  }
+
+  &__title {
+    @include text(27px);
+    line-height: 32.64px;
+    letter-spacing: 1.35px;
+    margin-left: 15px;
+    display: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include lg {
+      display: flex;
+      margin-left: 32px;
+    }
+  }
+
+  &__nav-link {
+    @include text(18px);
+    line-height: 21.76px;
+    letter-spacing: 1.92px;
+    margin-left: 15px;
+    text-decoration: none;
+    margin-right: 32px;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 
   &__actions {
     display: flex;
-    gap: 0px;
-    position: absolute;
-    right: 20px;
-    top: 2px;
+    gap: 20px;
 
+    @include lg {
+      gap: 32px;
+    }
   }
 
   &__action-button {
-    padding: 10px 20px;
-    @include button();
-    @include icon-small;
+    @include button;
+    @include icon-size(20px);
+
+    @include lg {
+      @include icon-size(24px);
+    }
   }
 }
-
-
