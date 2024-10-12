@@ -16,7 +16,7 @@
 
   @include lg {
     height: 64px;
-    padding-left: 127px;
+    padding: 0 127px;
   }
 
   &__mobile-menu {
@@ -95,10 +95,13 @@
 
   &__action-button {
     @include button;
-    @include icon-size(20px);
+    
+    img{
+      @include icon-size(20px);
+      @include lg {
+        @include icon-size(24px);
+      }
 
-    @include lg {
-      @include icon-size(24px);
     }
   }
 }
