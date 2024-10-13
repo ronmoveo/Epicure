@@ -72,6 +72,7 @@ export interface CommonSwiperProps {
 export interface RestaurantCardProps {
   restaurant: Restaurant;
   showChef?: boolean;
+  isStars?: boolean;
 }
 
 export interface SearchBarProps {

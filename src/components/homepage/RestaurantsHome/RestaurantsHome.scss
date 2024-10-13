@@ -1,0 +1,107 @@
+@import "/src/assets/styles/_mixins.scss";
+
+.RestaurantsHome {
+    margin: 50px 127.5px 80px;
+  
+    .title {
+        @include text(30px);
+        font-weight: 200;
+        line-height: 35px;
+        letter-spacing: 1.25px;
+        text-align: center;
+        margin-bottom: 40px;
+        
+    }
+  
+    .restaurantCards {
+      display: flex;
+      justify-content: center;
+      gap: 24px; 
+    }
+  
+    .all-items-link {
+      margin-top: 20px;
+      @include bold-text(24px);
+      line-height: 35px;
+      letter-spacing: 2px;
+      display: flex;
+      justify-content: right;
+
+      
+  
+      a {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        text-decoration: none;
+        color: #000;
+        @include bold-text(24px);
+        line-height: 35px;
+        letter-spacing: 2px;
+
+  
+        .arrow-icon {
+          margin-left: 12px;
+        }
+      }
+    }
+
+
+
+  
+    .restaurantCard {
+      width: 379px;
+      height: 404.89px;
+      box-sizing: border-box;
+
+
+      
+  
+      .restaurantImage {
+        height: 209px;
+        width: 379px;
+      }
+  
+      .restaurantInfo {
+        box-sizing: border-box;
+        width: 379px;
+        padding: 18px 20px
+      }
+  
+      .restaurantName {
+        display: flex;
+        justify-content: center;
+        @include text(40px);
+        line-height: 47px;
+        letter-spacing: 2.67px;
+      }
+  
+      .restaurantChef {
+        display: flex;
+        justify-content: center;
+        @include text(24px);
+        line-height: 30px;
+        letter-spacing: 1.97px;
+
+        
+        
+      }
+  
+      .restaurantRating {
+        display: flex;
+        justify-content: center;
+        display: flex;
+        margin-top: 8px;
+  
+        .star {
+          color: $primary-orange;  
+          font-size: 40px;
+          margin-right: 4px;
+        }
+  
+        .star.empty {
+          color: $primary-orange;  
+        }
+      }
+    }
+  }
