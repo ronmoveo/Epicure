@@ -14,10 +14,12 @@ const ChefOfTheWeek: React.FC <ChefOfTheWeekProps> = ({ chef }) => {
   return (
     <section className="chef-of-the-week">
       <h2 className="section-title">{CHEF_OF_THE_WEEK}</h2>
-      <div className="chef-info">
-        <ChefCard photo={chef.photo} name={chef.name} />
+      <div className="chef-content">
+        <div className="chef-info">
+          <ChefCard photo={chef.photo} name={chef.name} />
+        </div>
+        <p className="chef-about">{chef.about}</p>
       </div>
-      <p className="chef-about">{chef.about}</p>
 
       {isLargeScreen ? (
         <RestaurantsHome

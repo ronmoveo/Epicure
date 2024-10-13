@@ -15,23 +15,23 @@ const RestaurantsHome: React.FC<RestaurantsHomeProps> = ({ restaurants, title, a
     return (
         <section className="RestaurantsHome">
             <h2 className="title">{title}</h2>
-            <div className="restaurantCards">
-                    {restaurants.slice(0, 3).map(restaurant => (
-                        <RestaurantCard 
-                            key={restaurant.id} 
-                            restaurant={restaurant} 
-                            showChef={showChef}
-                            isStars={isStars}
-                        />
-                    ))}
-            </div>
-            {allLink && (
-                <div className="all-items-link">
-                    <a href={allLink}>
-                        {ALL_RESTAURANTS}  
-                        <img src="/arrow.svg" alt="arrow" className="arrow-icon" />
-                    </a>
+                <div className="restaurantCards">
+                        {restaurants.slice(0, 3).map(restaurant => (
+                            <RestaurantCard 
+                                key={restaurant.id} 
+                                restaurant={restaurant} 
+                                showChef={showChef}
+                                isStars={isStars}
+                            />
+                        ))}
                 </div>
+                {allLink && (
+                    <div className="all-items-link">
+                        <a href={allLink}>
+                            {ALL_RESTAURANTS}  
+                            <img src="/arrow.svg" alt="arrow" className="arrow-icon" />
+                        </a>
+                    </div>
             )}
         </section>
     );

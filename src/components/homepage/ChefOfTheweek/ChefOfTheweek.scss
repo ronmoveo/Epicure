@@ -1,20 +1,52 @@
 @import "src/assets/styles/_mixins.scss";
 
 .chef-of-the-week {
+  @include xl {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+    
+  }
+  .chef-content{
+    @include xl {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .chef-label-name{
+      height: 60px;
+      
+
+    }
+
+  }
   .section-title {
-    @include text;
-    font-size: 18px;
+    @include text();
     line-height: 35px;
     letter-spacing: 1.25px;
     margin-bottom: 20px;
     padding-left: 20px;
     margin-top: 48px;
-    text-transform: uppercase;
+    @include xl {
+      @include text(30px);
+      text-align: center;
+      margin-top: 80px;
+      margin-bottom: 40px;
+
+
+    }
   }
 
   .chef-info {
     margin-bottom: 20px;
     padding: 0 20px;
+    @include xl {
+      width: 478px;
+      height: 372px;
+      padding-left: 0;
+    }
+
   }
 
   .chef-about {
@@ -25,10 +57,28 @@
     text-align: justify;
     margin-bottom: 12px;
     padding: 0 20px;
+    @include xl {
+      box-sizing: border-box;
+      width: 642px;
+      height: 255px;
+      @include text(24px);
+      line-height: 35px;
+      letter-spacing: 1.25px;      
+    }
   }
 
+  
   .RestaurantsHome {
+    align-items: flex-start;
+    margin: 0;
+    margin-top: 45px;
+
+    .restaurantCards {
+      justify-content: flex-start;
+    }
+
     .title {
+      text-align: left;
       @include text(30px); 
       line-height: 35px;
       letter-spacing: 1.25px;
@@ -45,23 +95,43 @@
 
       .restaurantInfo {
         width: 100%;
-        
-        
 
         .restaurantName {
           @include bold-text(30px); 
           letter-spacing: 2.67;
           line-height: 47px;
           overflow: hidden;
-          white-space:initial;
+          white-space: initial;
           text-align: center;
           max-height: 94px;
           overflow-y: auto;
-          
-          
-
-
         }
+      }
+    }
+  }
+}
+
+.chef-card {
+  .chef-photo-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+
+    .chef-photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .chef-name-label {
+    
+
+      @include xl {
+        height: 78px;
+        font-size: 40px !important;
+        line-height: 47px;
+        letter-spacing: 2.67px;
+
       }
     }
   }

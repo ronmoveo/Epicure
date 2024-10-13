@@ -37,15 +37,16 @@
 
   .restaurantRating {
     display: flex;
+    gap: 4px;
+
 
     .star {
-      color: gold;
-      font-size: 16px; // Default star size, can be controlled by parent
-      margin-right: 2px;
+      color: $primary-orange;
+      font-size: 16px; 
     }
 
     .star.empty {
-      color: lightgray; // Empty star style
+      color: $primary-orange; 
     }
   }
 
