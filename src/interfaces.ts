@@ -125,6 +125,6 @@ export interface PaginationProps {
   currentPage: number;  
 }
 
-export interface UseIsLargeScreenProps {
-  size?: number;
+export interface useIsDesktopProps {
+  screenWidth?: number;
 }

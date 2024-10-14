@@ -6,12 +6,15 @@ import AboutUsText from './AboutUsText/AboutUsText';
 
 const AboutUs: React.FC = () => {
   return (
-    <div className="AboutUs">
+    <section className="AboutUs">
+      <div className='Wrapper'>
         <Logo />
-        <DownloadLogos />
-        <AboutUsText />
- 
-    </div>
+          <div className="Content">
+            <DownloadLogos />
+            <AboutUsText />
+          </div>
+      </div>
+    </section>
   );
 };
 

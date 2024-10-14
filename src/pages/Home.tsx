@@ -7,14 +7,14 @@ import AboutUs from '../components/homepage/AboutUs/AboutUs';
 import RestaurantsSwiper from '../components/homepage/ResaurantsSwiper/RestaurantsSwiper';
 import ChefOfTheWeek from '../components/homepage/ChefOfTheweek/ChefOfTheweek';
 import { POPULAR_RESTAURANTS_IN_EPICURE } from '../utils/constants';
-import useIsLargeScreen from '../components/Common/useIsLargeScreen';
 import RestaurantsHome from '../components/homepage/RestaurantsHome/RestaurantsHome';
 import { RoutePaths } from '../utils/enum';
+import useIsDesktop from '../components/Common/useIsDesktop';
 
 
 const Home: React.FC = () => {
 
-  const isLargeScreen = useIsLargeScreen();
+  const IsDesktopScreen = useIsDesktop();
 
   const yossiShitrit = mockChefs.find(chef => chef.name === "Yossi Shitrit");
 
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
   return (
     <div className="home">
       <Hero/>
-      {isLargeScreen ? (
+      {IsDesktopScreen ? (
         <RestaurantsHome
           restaurants={mockRestaurants} 
           title={POPULAR_RESTAURANTS_IN_EPICURE} 

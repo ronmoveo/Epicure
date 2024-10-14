@@ -4,13 +4,13 @@ import RestaurantsSwiper from '../ResaurantsSwiper/RestaurantsSwiper';
 import './ChefOfTheWeek.scss';
 import { CHEF_OF_THE_WEEK, YOSSIS_RESTAURANTS } from '../../../utils/constants';
 import ChefCard from '../../Common/ChefCard/ChefCard';
-import useIsLargeScreen from '../../Common/useIsLargeScreen';
 import RestaurantsHome from '../RestaurantsHome/RestaurantsHome';
+import useIsDesktop from '../../Common/useIsDesktop';
 
 
 
 const ChefOfTheWeek: React.FC <ChefOfTheWeekProps> = ({ chef }) => {
-  const isLargeScreen = useIsLargeScreen();
+  const IsDesktopScreen = useIsDesktop();
   return (
     <section className="chef-of-the-week">
       <h2 className="section-title">{CHEF_OF_THE_WEEK}</h2>
@@ -21,7 +21,7 @@ const ChefOfTheWeek: React.FC <ChefOfTheWeekProps> = ({ chef }) => {
         <p className="chef-about">{chef.about}</p>
       </div>
 
-      {isLargeScreen ? (
+      {IsDesktopScreen ? (
         <RestaurantsHome
           restaurants={chef.restaurants} 
           title={YOSSIS_RESTAURANTS} 
