@@ -19,8 +19,16 @@
     padding: 0 127px;
   }
 
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__mobile-menu {
-   
     @include lg {
       display: none;
     }
@@ -32,7 +40,6 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-
     @include lg {
       position: static;
       transform: none;
@@ -48,7 +55,6 @@
 
   &__title {
     display: none;
-
     @include lg {
       @include text(27px);
       line-height: 32.64px;
@@ -60,7 +66,6 @@
 
   &__nav {
     display: none;
-
     @include lg {
       display: flex;
       margin-left: 32px;
@@ -74,7 +79,6 @@
     margin-left: 15px;
     text-decoration: none;
     margin-right: 32px;
-
     &:last-child {
       margin-right: 0;
     }
@@ -87,7 +91,6 @@
   &__actions {
     display: flex;
     gap: 20px;
-
     @include lg {
       gap: 32px;
     }
@@ -95,15 +98,12 @@
 
   &__action-button {
     @include button;
-    
-    img{
+
+    img {
       @include icon-size(20px);
       @include lg {
         @include icon-size(24px);
       }
-
     }
   }
 }
-
-

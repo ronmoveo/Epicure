@@ -10,22 +10,45 @@
     align-items: center;
     padding-left: 19px;
     margin-top: 32px;
+
+    @include lg {
+      gap: 40px;
+      height: 105px;
+      margin: 0;
+      justify-content: center; 
+    }
   
     .footer__links {
       display: flex;
       flex-direction: column;
       height: 100%;
+
+      @include lg {
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+
+      }
       
       a {
         @include body-text();
-        text-decoration: none;
-        color: $primary-black;
+        line-height: 21.76px;
+        letter-spacing: 1.92px;
         margin-bottom: 40px;
-        flex: 1;
   
         &:last-child {
           margin-bottom: 24px;
+
+          @include lg {
+            margin-bottom: 0;
+          }
         }
+
+        @include lg {
+          margin-bottom: 0;
+        }
+
+
       }
     }
 

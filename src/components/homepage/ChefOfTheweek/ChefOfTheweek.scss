@@ -2,25 +2,27 @@
 
 .chef-of-the-week {
   @include xl {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-    
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px; 
   }
   .chef-content{
     @include xl {
       display: flex;
       flex-direction: row;
       align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 1440px; 
+      margin: 0 auto;
+      margin-left: 100px;
+
     }
     .chef-label-name{
       height: 60px;
-      
-
     }
-
   }
+
   .section-title {
     @include text();
     line-height: 35px;
@@ -30,9 +32,9 @@
     margin-top: 48px;
     @include xl {
       @include text(30px);
-      text-align: center;
       margin-top: 80px;
       margin-bottom: 40px;
+      text-align: center;
 
 
     }
@@ -70,8 +72,8 @@
   
   .RestaurantsHome {
     align-items: flex-start;
-    margin: 0;
     margin-top: 45px;
+    margin-left: 100px;
 
     .restaurantCards {
       justify-content: flex-start;
@@ -124,8 +126,6 @@
     }
 
     .chef-name-label {
-    
-
       @include xl {
         height: 78px;
         font-size: 40px !important;

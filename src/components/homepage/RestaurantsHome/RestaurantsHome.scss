@@ -1,7 +1,10 @@
 @import "/src/assets/styles/_mixins.scss";
 
 .RestaurantsHome {
-    margin: 50px 60px 80px;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
   
     .title {
         @include text(30px);
@@ -26,6 +29,7 @@
       letter-spacing: 2px;
       display: flex;
       justify-content: right;
+      margin-right: 130px;
 
       
   

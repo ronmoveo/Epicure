@@ -124,3 +124,7 @@ export interface PaginationProps {
   onPageChange: (selectedItem: { selected: number }) => void;
   currentPage: number;  
 }
+
+export interface UseIsLargeScreenProps {
+  size?: number;
+}
