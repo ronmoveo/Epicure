@@ -1,16 +1,16 @@
 import React from 'react';
 import {ChefOfTheWeekProps } from '../../../interfaces';
-import RestaurantsSwiper from '../ResaurantsSwiper/RestaurantsSwiper';
+
 import './ChefOfTheWeek.scss';
 import { CHEF_OF_THE_WEEK, YOSSIS_RESTAURANTS } from '../../../utils/constants';
 import ChefCard from '../../Common/ChefCard/ChefCard';
-import RestaurantsHome from '../RestaurantsHome/RestaurantsHome';
-import useIsDesktop from '../../Common/useIsDesktop';
+
+import IsDesktopRestaurantsHome from '../IsDesktopRestaurantsHome';
 
 
 
 const ChefOfTheWeek: React.FC <ChefOfTheWeekProps> = ({ chef }) => {
-  const IsDesktopScreen = useIsDesktop();
+
   return (
     <section className="chef-of-the-week">
       <h2 className="section-title">{CHEF_OF_THE_WEEK}</h2>
@@ -21,17 +21,11 @@ const ChefOfTheWeek: React.FC <ChefOfTheWeekProps> = ({ chef }) => {
         <p className="chef-about">{chef.about}</p>
       </div>
 
-      {IsDesktopScreen ? (
-        <RestaurantsHome
-          restaurants={chef.restaurants} 
-          title={YOSSIS_RESTAURANTS} 
-        />
-      ) : (
-        <RestaurantsSwiper 
+      <IsDesktopRestaurantsHome 
         restaurants={chef.restaurants} 
-        title={`${chef.name.toUpperCase()}'S RESTAURANTS`} 
+        title1={YOSSIS_RESTAURANTS} 
+        title2={`${chef.name.toUpperCase()}'S RESTAURANTS`}  
       />
-      )}
     </section>
   );
 };

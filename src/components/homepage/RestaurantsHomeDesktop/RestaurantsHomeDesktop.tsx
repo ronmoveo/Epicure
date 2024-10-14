@@ -1,19 +1,13 @@
 import { ALL_RESTAURANTS } from "../../../utils/constants";
-import { Restaurant } from "../../../interfaces";
+import { RestaurantsHomeDesktopProps } from "../../../interfaces";
 import RestaurantCard from "../../Common/RestaurantCard/RestaurantCard";
-import "./RestaurantsHome.scss";
+import "./RestaurantsHomeDesktop.scss";
 
-interface RestaurantsHomeProps {
-    restaurants: Restaurant[];
-    title: string;
-    allLink?: string;
-    showChef?: boolean;
-    isStars?: boolean;
-}
 
-const RestaurantsHome: React.FC<RestaurantsHomeProps> = ({ restaurants, title, allLink, showChef = false, isStars = false }) => {
+
+const RestaurantsHomeDesktop: React.FC<RestaurantsHomeDesktopProps> = ({ restaurants, title, allLink, showChef = false, isStars = false }) => {
     return (
-        <section className="RestaurantsHome">
+        <section className="RestaurantsHomeDesktop">
             <h2 className="title">{title}</h2>
                 <div className="restaurantCards">
                         {restaurants.slice(0, 3).map(restaurant => (
@@ -37,4 +31,4 @@ const RestaurantsHome: React.FC<RestaurantsHomeProps> = ({ restaurants, title, a
     );
 }
 
-export default RestaurantsHome;
+export default RestaurantsHomeDesktop;

@@ -128,3 +128,11 @@ export interface PaginationProps {
 export interface useIsDesktopProps {
   screenWidth?: number;
 }
+
+export interface RestaurantsHomeDesktopProps {
+  restaurants: Restaurant[];
+  title: string;
+  allLink?: string;
+  showChef?: boolean;
+  isStars?: boolean;
+}
