@@ -19,11 +19,38 @@
     flex-grow: 1;
   }
 
+  &__name-container {
+    @include xl {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 94px;
+    }
+  }
+
   &__name {
     @include bold-text();
     margin-bottom: 8px;
     height: 29px;
     @include horizontal-overflow;
+
+    @include xl {
+      @include bold-text(40px);
+      margin-bottom: 10px;
+      padding-left: 80px;
+      padding-right: 80px;
+      height: 94px;
+      line-height: 47px;
+      letter-spacing: 2.67px;
+      text-align: center;
+      overflow: hidden;
+      white-space: initial;
+      text-align: center;
+      overflow-y: auto;
+
+      
+    
+    }
   }
 
   &__ingredients {
@@ -32,17 +59,31 @@
     margin-bottom: 16px;
     flex-grow: 1;
     height: 60px;
+
+    @include xl {
+      @include text(24px);
+      line-height: 30px;
+      letter-spacing: 1.97;
+      height: 123px;
+      text-align: center;
+    }
   }
 
   &__icon {
     width: 30px;
     height: 24px;
+    margin-bottom: 16px;
   }
 
   &__price {
     @include bold-text(16px);
     letter-spacing: 1.97px;
     text-align: left;
+    @include xl {
+      @include text(24px);
+      line-height: 30px;
+      letter-spacing: 1.97;
+    }
   }
 
   &__bottom-row {
@@ -51,11 +92,21 @@
     justify-content: space-between;  
     width: 100%;
     margin-bottom: 16px;
+    @include xl {
+      margin-bottom: 0;
+    }
 
     .dish-card__divider {
+      
       flex-grow: 1;  
       border-bottom: 0.5px solid $secondary-gray;
       margin-left: 10px; 
+    }
+  }
+
+  &--desktop {
+    .dish-card__icon {
+      align-self: center;
     }
   }
 }

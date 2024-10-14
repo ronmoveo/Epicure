@@ -28,6 +28,7 @@ export interface Dish {
     openedDate: Date;
     openingHours: OpeningHours[]; // Array of opening hours for each day
     dishes: Dish[];
+
   }
 
 export interface Chef {
@@ -91,6 +92,7 @@ export interface FilterBarProps {
 export interface DishCardProps {
   dish: Dish;
   onClick?: () => void;
+  isDesktop?: boolean;
 }
 
 
@@ -135,4 +137,17 @@ export interface RestaurantsHomeDesktopProps {
   allLink?: string;
   showChef?: boolean;
   isStars?: boolean;
+}
+
+
+export interface IsDesktopDishesHomeProps {
+  signatureDishes: Dish[];
+  title: string;
+
+}
+
+export interface DishesHomeDesktopProps {
+  dishes: Dish[];
+  title: string;
+  isDesktop?: boolean;
 }

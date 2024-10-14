@@ -12,7 +12,8 @@ export default function DishSwiper({ dishes }: DishSwiperProps) {
       items={dishes}
       renderItem={(dish) => (
         <DishCard 
-          dish={dish} 
+          dish={dish}
+          isDesktop={false}
         />
       )}
       title={SIGNATURE_DISH_OF}

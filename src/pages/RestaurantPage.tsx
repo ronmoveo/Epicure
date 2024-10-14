@@ -86,6 +86,7 @@ const RestaurantPage: React.FC = () => {
             key={dish.id} 
             dish={dish} 
             onClick={() => handleDishClick(dish)} 
+            isDesktop={false}
           />
         ))}
       </div>

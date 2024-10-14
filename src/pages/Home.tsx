@@ -5,9 +5,10 @@ import Hero from '../components/homepage/Hero/Hero';
 import DishIconsList from '../components/homepage/DishIconsList/DishIconsList';
 import AboutUs from '../components/homepage/AboutUs/AboutUs';
 import ChefOfTheWeek from '../components/homepage/ChefOfTheweek/ChefOfTheweek';
-import { POPULAR_RESTAURANTS_IN_EPICURE } from '../utils/constants';
+import { POPULAR_RESTAURANTS_IN_EPICURE, SIGNATURE_DISH_OF } from '../utils/constants';
 import { RoutePaths } from '../utils/enum';
 import IsDesktopRestaurantsHome from '../components/homepage/IsDesktopRestaurantsHome';
+import IsDesktopDishesHome from '../components/homepage/IsDesktopDishesHome';
 
 
 const Home: React.FC = () => {
@@ -30,7 +31,11 @@ const Home: React.FC = () => {
         isStars
       />
   
-      <DishSwiper dishes={signatureDishes} />
+      <IsDesktopDishesHome 
+      signatureDishes={signatureDishes} 
+      title={SIGNATURE_DISH_OF} 
+      />
+      
       <DishIconsList/>
       {yossiShitrit && <ChefOfTheWeek chef={yossiShitrit} />}
       <AboutUs />

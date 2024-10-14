@@ -1,4 +1,4 @@
-import { Chef, Restaurant } from "../../interfaces";
+import { Restaurant } from "../../interfaces";
 import useIsDesktop from "../Common/useIsDesktop";
 import RestaurantsSwiper from "./ResaurantsSwiper/RestaurantsSwiper";
 import RestaurantsHomeDesktop from "./RestaurantsHomeDesktop/RestaurantsHomeDesktop";
