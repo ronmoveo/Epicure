@@ -9,9 +9,10 @@
   background-color: $primary-white;
   box-shadow: 2px 4px 10px 0px #AFAFAF40;
   flex-direction: column;
-  margin-top: 17px;
-  @include xl {
-    max-width: 497px;
+  
+  @include lg {
+    margin-top: 17px;
+    width: 497px;
     height: 586px;
 
   }
@@ -50,7 +51,7 @@
     justify-content: center;
     height: 100%;
     
-    @include xl {
+    @include lg {
       justify-content: flex-start;
       padding-top: 225px; 
     }
@@ -79,7 +80,7 @@
     &__history {
       display: none;
 
-      @include xl {
+      @include lg {
         display: block;
         height: 48px;
         width: 206;
@@ -193,8 +194,8 @@
 
   .cart-count {
     position: absolute;
-    top: 5px;
-    left: 15px;
+    top: -5px;
+    left: -5px;
     background-color: $primary-black;
     color: $primary-white;
     border-radius: 50%;
