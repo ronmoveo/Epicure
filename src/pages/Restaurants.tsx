@@ -40,7 +40,7 @@ const Restaurants: React.FC = () => {
       <div className="restaurants__grid">
         {paginatedRestaurants.map((restaurant) => (
           <Link key={restaurant.id} to={`/restaurants/${restaurant.id}`}>
-            <RestaurantCard restaurant={restaurant} showChef={true} />
+            <RestaurantCard restaurant={restaurant} showChef={true} isStars />
           </Link>
         ))}
       </div>
