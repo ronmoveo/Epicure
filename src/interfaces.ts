@@ -37,6 +37,9 @@ export interface Chef {
   restaurants: Restaurant[];
   photo: string;
   about: string;
+  createAt: string;
+  updateAt: string;
+  view: number;
 }
 
 export interface  DishSwiperProps {

@@ -29,7 +29,7 @@ const Header: React.FC = () => (
             {RESTAURANTS}
           </NavLink>
           <NavLink
-            to={RoutePaths.RESTAURANT}
+            to={RoutePaths.CHEFS}
             className={({ isActive }) =>
               isActive ? "header__nav-link header__nav-link--active" : "header__nav-link"}
           >

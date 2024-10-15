@@ -25,6 +25,7 @@ export const CLOSED = "Closed";
 export const EPICURE = "EPICURE";
 export const CHEFS = "Chefs"
 export const ORDER_HISTORY = "ORDER HISTORY"
+export const MOST_VIEWED = "Most Viewd"
 
 export const CURRENCY_SYMBOL = "₪";
 export const SCREEN_XL_MIN = "1280";

@@ -1,0 +1,59 @@
+@import "src/assets/styles/_mixins.scss";
+
+.chefs {
+  padding: 0 20px;
+  margin-top: 60px;
+
+  @include md {
+    padding: 0;
+  }
+
+  @include lg {
+    max-width: 1184px;
+    margin: 0 auto;
+    margin-top: 78px;
+  }
+
+  &__title {
+    @include text(24px);
+    line-height: 24px;
+    letter-spacing: 1.92px;
+    margin-bottom: 20px;
+    
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__filter-bar {
+    line-height: 21.76px;
+    letter-spacing: 1.92px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
+    @include lg {
+      .filter-bar__button {
+        @include text(22px);
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+
+    @include md {
+      grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+      padding-right: 5.72px;
+    }
+
+    @include xl {
+      grid-template-columns: repeat(3, minmax(335px, 1fr));
+    }
+  }
+}
