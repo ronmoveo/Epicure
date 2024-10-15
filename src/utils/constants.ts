@@ -24,6 +24,7 @@ export const QUANTITY = "Quantity";
 export const CLOSED = "Closed";
 export const EPICURE = "EPICURE";
 export const CHEFS = "Chefs"
+export const ORDER_HISTORY = "ORDER HISTORY"
 
 export const CURRENCY_SYMBOL = "₪";
 export const SCREEN_XL_MIN = "1280";

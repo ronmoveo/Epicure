@@ -92,7 +92,6 @@ export interface FilterBarProps {
 export interface DishCardProps {
   dish: Dish;
   onClick?: () => void;
-  isDesktop?: boolean;
 }
 
 
@@ -134,6 +133,15 @@ export interface useIsDesktopProps {
 export interface RestaurantsHomeDesktopProps {
   restaurants: Restaurant[];
   title: string;
+  allLink?: string;
+  showChef?: boolean;
+  isStars?: boolean;
+}
+
+export interface IsDesktopRestaurantsHomeProps {
+  restaurants: Restaurant[];
+  title1: string;
+  title2?: string;
   allLink?: string;
   showChef?: boolean;
   isStars?: boolean;

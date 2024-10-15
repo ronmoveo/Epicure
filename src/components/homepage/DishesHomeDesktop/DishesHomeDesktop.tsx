@@ -13,7 +13,6 @@ const DishesHomeDesktop: React.FC<DishesHomeDesktopProps> = ({ dishes, title, is
                             <DishCard 
                                 key={dish.id}
                                 dish={dish}
-                                isDesktop={isDesktop}                       
                             />
                         ))}
                 </div>

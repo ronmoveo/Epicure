@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CartModal.scss';
 import { useCart } from '../../../../cartContext';
-import { CHECKOUT, CURRENCY_SYMBOL, MY_ORDER, TOTAL, YOUR_BAG_IS_EMPTY } from '../../../../utils/constants';
+import { CHECKOUT, CURRENCY_SYMBOL, MY_ORDER, ORDER_HISTORY, TOTAL, YOUR_BAG_IS_EMPTY } from '../../../../utils/constants';
 
 const CartModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +41,9 @@ const CartModal: React.FC = () => {
                 <p className="cart-modal__text">
                   {YOUR_BAG_IS_EMPTY}
                 </p>
+                <button className="cart-modal__history">
+                {ORDER_HISTORY}
+                </button>
               </div>
             ) : (
               <div className="cart-modal__items">

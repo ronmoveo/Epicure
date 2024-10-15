@@ -1,17 +1,7 @@
-import { Restaurant } from "../../interfaces";
+import { IsDesktopRestaurantsHomeProps } from "../../interfaces";
 import useIsDesktop from "../Common/useIsDesktop";
 import RestaurantsSwiper from "./ResaurantsSwiper/RestaurantsSwiper";
 import RestaurantsHomeDesktop from "./RestaurantsHomeDesktop/RestaurantsHomeDesktop";
-
-
-export interface IsDesktopRestaurantsHomeProps {
-    restaurants: Restaurant[];
-    title1: string;
-    title2?: string;
-    allLink?: string;
-    showChef?: boolean;
-    isStars?: boolean;
-  }
 
 const IsDesktopRestaurantsHome: React.FC<IsDesktopRestaurantsHomeProps> = ({ restaurants, title1, title2 = title1, allLink = undefined, showChef = false, isStars = false }) => {
 
