@@ -1,6 +1,9 @@
 @import "../assets/styles/_mixins.scss";
 
 .restaurant-page {
+  max-width: 1184px;
+  width: 100%;
+  margin: 0 auto;
   &__header {
     margin-bottom: 29px;
   }
@@ -10,6 +13,11 @@
       width: 100%;
       height: 273px;
       object-fit: cover;
+      margin-top: 48px;
+      @include lg { 
+        margin-top: 64px;
+        height: 425px;
+      }
     }
   }
 
@@ -20,6 +28,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    @include lg {
+      padding-top:32px;
+      padding-bottom:32px;
     }
   }
 
@@ -51,6 +63,7 @@
       font-size: 32px;
       margin-bottom: 32px;
       line-height: 36px;
+      letter-spacing: 1.97px;
 
     }
 
@@ -67,17 +80,25 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @include md {
+      font-size: 22px;
+    }
   }
 
   &__status-icon {
     @include icon-size(17px);
+
+    @include md {
+      @include icon-size(22px);
+    }
   }
 
   &__dishes {
     display: grid;
     grid-template-columns: 1fr; 
     justify-items: center;
-    gap: 20px;
+    gap: 32px;
     padding: 22px;
     padding-top: 0;
 
@@ -89,6 +110,7 @@
 
     @include lg {
       grid-template-columns: repeat(3, minmax(272px, 1fr));
+      padding: 0;
     }
 
     @include xl {
@@ -124,24 +146,56 @@
       margin: 0 auto; 
       width: fit-content; 
     }
+
+    .filter-bar__button {
+      @include text(24px);
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
     
   }
 
   .dish-card {
     width: 335px;
     height: 375px;
-
+  
     @include md {
       width: 272px;
       height: 413px;
     }
-  }
-
-  .dish-card__image {
-    height: 211px;
-
-    @include md {
-      height: 172px;
+  
+    &__image {
+      height: 211px;
+  
+      @include md {
+        height: 172px;
+      }
     }
+
+    @include xl {
+
+      &__name {
+        font-size: 24px;
+        height: 26px;
+        width: 200px;
+        line-height: 26px;
+        letter-spacing: 2.67px;
+        padding-top: 8px;
+        margin: 0 auto;
+      }
+
+      &__ingredients {
+        padding-top: 8px;
+        height: 137px;
+        line-height: 24px;
+        letter-spacing: 1.97px;
+        margin-bottom: 6px;
+      }
+
+    }
+
   }
+
+
+
 }

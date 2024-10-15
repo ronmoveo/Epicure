@@ -37,19 +37,25 @@
         height: 31px;
         width: 40px;
       }
-  
-      .dish-card__bottom-row {
-        //justify-content: space-between;
-  
-        .dish-card__divider {
-          //flex-grow: 1;
-          //margin: 0 10px;
+
+      .dish-card__name {
+        @include xl {
+          @include bold-text(40px);
+          margin-bottom: 10px;
+          padding-left: 80px;
+          padding-right: 80px;
+          height: 94px;
+          line-height: 47px;
+          letter-spacing: 2.67px;
+          text-align: center;
+          overflow: hidden;
+          white-space: initial;
+          text-align: center;
+          overflow-y: auto;
         }
+      }
   
-        .dish-card__price {
-          //flex-shrink: 0;
-        }
-    }
+
   
 
     }
