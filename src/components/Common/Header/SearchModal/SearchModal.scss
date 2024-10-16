@@ -11,8 +11,9 @@
   @include lg{
     margin-top: 64px;
     width: 497px;
-    height: 586px;
+    height: 573px;
     left: auto;
+    padding-top: 20px;
     
    
    }
@@ -34,15 +35,8 @@
     padding: 0px;
     position: absolute;
     left: 0;
-    margin-left: 24.5px;
-    padding-top: 20px;
-
-    @include lg {
-      @include icon-size(52px);
-      img {
-        width: 28px; 
-        height: 28px; 
-      }
+    img {
+      margin-left: 22px;
     }
 
   }
@@ -50,9 +44,7 @@
   &__title {
     @include text(18px);
     @include lg{
-     font-size: px;
-     margin-top: 20px;
-    
+     font-size: 22px;    
     }
     justify-content: left;
     line-height: 21.76px;
@@ -91,7 +83,7 @@
 
   .search-bar__input {
     @include lg {
-      @include text(18px);
+      @include text(17px);
 
       padding-left: 0px;
     }
