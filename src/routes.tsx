@@ -1,13 +1,23 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Header from './components/Header';
-import Home from './pages/Home';
-import RestaurantList from './pages/RestaurantList';
-import RestaurantDetail from './pages/RestaurantDetail';
+import { createBrowserRouter } from "react-router-dom";
+import App from "./App";
+import Home from "./pages/Home";
+import { RoutePaths } from "./utils/enum";
+import Restaurants from "./pages/Restaurants";
+import RestaurantPage from "./pages/RestaurantPage";
+import Chefs from "./pages/Chefs/Chefs";
 
 const routes = createBrowserRouter([
-  { path: "/", element: <> <Header /><Home /> </> },
-  { path: "/restaurants", element: <> <Header /><RestaurantList /> </> },
-  { path: "/restaurant/:id", element: <> <Header /><RestaurantDetail /> </> }
+  {
+    path: RoutePaths.HOME,
+    element: <App />,
+    children: [
+      { path: RoutePaths.HOME, element: <Home /> }, 
+      { path: RoutePaths.RESTAURANTS, element: <Restaurants /> },
+      { path: `${RoutePaths.RESTAURANT}/:id`, element: <RestaurantPage /> },
+      { path: RoutePaths.CHEFS, element: <Chefs /> },
+
+    ],
+  },
 ]);
 
 export default routes;

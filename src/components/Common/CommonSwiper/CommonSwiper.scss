@@ -1,0 +1,48 @@
+@import "/src/assets/styles/_mixins.scss";
+
+.swiperContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+
+  .swiperTitle {
+    margin-top: 48px;
+    @include text();
+    letter-spacing: 1.25px;
+    line-height: 21.47px;
+    text-align: left;
+    margin-bottom: 17px;
+    padding-left: 20px;
+  }
+
+  .swiperWrapper {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: auto;
+    max-width: 245px;
+  }
+
+  .all-items-link {
+    margin-top: 24px;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+
+    a {
+      @include bold-text(16px);
+      color: $primary-black;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      .arrow-icon {
+        margin-left: 12px;
+        @include icon-size(24px);
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import "src/assets/styles/_mixins.scss";
+
+.dish-card {
+  background-color: $card-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+
+  &__image {
+    object-fit: cover;
+  }
+
+  &__info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__name-container {
+    @include xl {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 94px;
+    }
+  }
+
+  &__name {
+    @include bold-text();
+    margin-bottom: 8px;
+    height: 29px;
+    @include horizontal-overflow;
+
+   
+  }
+
+  &__ingredients {
+    @include body-text;
+    @include vertical-overflow;
+    margin-bottom: 16px;
+    flex-grow: 1;
+    height: 60px;
+
+    @include xl {
+      @include text(24px);
+      line-height: 30px;
+      letter-spacing: 1.97;
+      height: 123px;
+      text-align: center;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__price {
+    @include bold-text(16px);
+    letter-spacing: 1.97px;
+    text-align: left;
+    @include xl {
+      @include text(24px);
+      line-height: 30px;
+      letter-spacing: 1.97;
+    }
+  }
+
+  &__bottom-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    width: 100%;
+    margin-bottom: 16px;
+    @include xl {
+      margin-bottom: 0;
+    }
+
+    .dish-card__divider {
+      
+      flex-grow: 1;  
+      border-bottom: 0.5px solid $secondary-gray;
+      margin-left: 10px; 
+    }
+  }
+
+  &--desktop {
+    .dish-card__icon {
+      align-self: center;
+    }
+  }
+}

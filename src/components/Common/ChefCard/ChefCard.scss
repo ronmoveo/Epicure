@@ -1,0 +1,56 @@
+@import "src/assets/styles/_mixins.scss";
+
+.chef-card {
+  width: 100%;
+  height: 337px;
+  
+
+  @include md {
+    width: 335px;
+    height: 360px;
+  }
+
+  @include xl {
+    width: 379px;
+    height: 404.89px;
+  }
+
+  .chef-photo-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    
+
+    .chef-photo {
+      width: 100%;
+      height: 100%; 
+      object-fit: cover;
+    }
+
+    .chef-name-label {
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $label-color;
+      height: 78px;
+      @include text(18px);
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      @include lg {
+        @include bold-text(40px);
+        line-height: 47px;
+        letter-spacing: 2.67px;
+
+      }
+
+    }
+  }
+}
+

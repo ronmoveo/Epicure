@@ -1,0 +1,39 @@
+@import "src/assets/styles/_mixins.scss";
+
+.pagination-container {
+    margin-top: 40px;    
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+  
+    li {
+      margin: 5px;
+  
+      a {
+        padding: 8px 12px;
+        border: 1px solid $primary-white;
+        cursor: pointer;
+        text-decoration: none;
+        color: $primary-black;
+        min-width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+  
+      &.active a {
+        background-color: $card-color;
+        color: $primary-black;
+        border-color: $primary-black;
+      }
+  
+  
+    }
+  }

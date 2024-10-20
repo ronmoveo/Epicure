@@ -1,0 +1,224 @@
+@import '../../../../assets/styles/mixins';
+
+.cart-modal {
+  position: fixed;
+  top: 46px;
+  right: 0;
+  width: 100%;
+  height: 218px;
+  background-color: $primary-white;
+  box-shadow: 2px 4px 10px 0px #AFAFAF40;
+  flex-direction: column;
+  padding-top: 16px;
+
+  
+  @include lg {
+    padding-top: 27px;
+    width: 497px;
+    height: 586px;
+
+  }
+
+  &__header {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  &__title {
+    @include bold-text(20px);
+    line-height: 24px;
+    letter-spacing: 2.67px;
+    margin-bottom: 4px;
+    @include horizontal-overflow;
+  }
+
+  &__restaurant {
+    @include text(18px);
+    line-height: 22px;
+    letter-spacing: 1.97px;
+    margin-bottom: 20px;
+    @include horizontal-overflow;
+  }
+
+  &__items-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 0 20px;
+    margin: 0 auto;
+    background-color: $primary-white;
+
+    @include lg {
+      height: 262px;
+      width: 342px;
+
+      &--empty {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 61px;
+    
+    @include lg {
+      justify-content: flex-start;
+      padding-top: 241px;
+    }
+  }
+  
+
+  &__image-wrapper {
+    @include icon-size(49px);
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    width: 100%; 
+    height: 100%;
+  }
+
+  &__text {
+    @include text(16px);
+    line-height: 22px;
+    letter-spacing: 1.97px;
+    text-align: center;
+    width: 145px;
+    
+  }
+
+    &__history {
+      display: none;
+
+      @include lg {
+        display: block;
+        height: 48px;
+        width: 206;
+        background-color: transparent;
+        @include bold-text;
+        line-height: 20px;
+        letter-spacing: 1.97px;
+        padding: 14px 15px;
+        margin-top: 135px;
+        margin-bottom: 44px;
+        border: 1px 0px 0px 0px;
+      }
+
+
+
+    }
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    height: 96px;
+    background-color: $card-color;
+  }
+
+  &__item-image {
+    @include icon-size(96px);
+    object-fit: cover;
+    margin-right: 24px;
+  }
+
+  &__item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 8px;
+    overflow-x: auto;
+    margin-right: 12px;
+  }
+
+  &__item-name {
+    line-height: 26px;
+    letter-spacing: 2.67px;
+    @include horizontal-overflow;
+    
+  }
+
+  &__item-name-text {
+    @include bold-text(18px);
+  }
+
+  &__item-quantity {
+    @include bold-text(14px);
+  }
+
+  &__item-options {
+    @include text(14px);
+    @include horizontal-overflow;
+  }
+
+  &__item-price-container{
+    @include text(16px);
+    text-align: right;
+    margin-bottom: 12px;
+    line-height: 18px;
+    letter-spacing: 1.97px;
+  }
+
+  &__item-currency{
+    @include text(13px);
+  }
+
+  &__footer {
+    padding: 16px 20px;
+    background-color: $primary-white;
+  }
+
+  &__total {
+    @include text(20px);
+    line-height: 24px;
+    letter-spacing: 2.67px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__currency{
+    @include text(15px);
+  }
+
+  &__checkout {
+    min-width: 206px;
+    height: 48px;
+    background-color: $primary-black;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto; 
+    display: block; 
+  }
+
+  &__checkout-text {
+    @include text(18px);
+    line-height: 20px;
+    letter-spacing: 2.67px;
+    color: $primary-white;
+  }
+}
+
+.header__action-button {
+  position: relative;
+
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    background-color: $primary-black;
+    color: $primary-white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 9.77px;
+  }
+}
+
+

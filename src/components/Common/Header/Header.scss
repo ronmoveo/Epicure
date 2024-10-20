@@ -1,0 +1,109 @@
+@import "src/assets/styles/_mixins.scss";
+
+.header {
+  background-color: $primary-white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 46px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+
+  @include lg {
+    height: 64px;
+    padding: 0 127px;
+  }
+
+  &__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__mobile-menu {
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    @include lg {
+      position: static;
+      transform: none;
+    }
+  }
+
+  &__logo {
+    img {
+      width: 33px;
+      height: 32px;
+    }
+  }
+
+  &__title {
+    display: none;
+    @include lg {
+      @include text(27px);
+      line-height: 32.64px;
+      letter-spacing: 1.35px;
+      margin-left: 15px;
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: none;
+    @include lg {
+      display: flex;
+      margin-left: 32px;
+    }
+  }
+
+  &__nav-link {
+    @include text(18px);
+    line-height: 21.76px;
+    letter-spacing: 1.92px;
+    margin-left: 15px;
+    text-decoration: none;
+    margin-right: 32px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-link--active {
+    border-bottom: 1.8px solid $primary-orange;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 20px;
+    @include lg {
+      gap: 32px;
+    }
+  }
+
+  &__action-button {
+    @include button;
+
+    img {
+      @include icon-size(20px);
+      @include lg {
+        @include icon-size(24px);
+      }
+    }
+  }
+}

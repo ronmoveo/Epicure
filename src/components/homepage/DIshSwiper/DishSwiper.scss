@@ -1,0 +1,36 @@
+
+@import "src/assets/styles/_mixins.scss";
+
+
+.DishSwiper{
+
+  .dish-card{
+    height: 398px;
+    width: 245px;
+  }
+  
+  .dish-card__image{
+    height: 152px;
+  }
+  
+  .dish-card__info{
+    height: 236px;
+  }
+  
+  .dish-card__divider{
+    display: none;
+  }
+
+  .dish-card__ingredients{
+    height: 100px;
+  }
+
+  .dish-card__bottom-row{
+    margin-top: 16px;
+  }
+
+}
+
+
+
+

@@ -1,0 +1,92 @@
+@import "src/assets/styles/_mixins.scss";
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $primary-white;
+  z-index: 1000;
+  height: 413px;
+  padding-top: 13px;
+  @include lg{
+    margin-top: 64px;
+    width: 497px;
+    height: 573px;
+    left: auto;
+    padding-top: 20px;
+   }
+   
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 37px;
+    position: relative;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    position: absolute;
+    left: 0;
+    img {
+      margin-left: 22px;
+    }
+
+  }
+
+  &__title {
+    @include text(18px);
+    @include lg{
+     font-size: 22px;    
+    }
+    justify-content: left;
+    line-height: 21.76px;
+    letter-spacing: 1.9px;
+    text-align: left;
+  }
+
+  &__search{
+    width: 100%;
+    max-width: 315px;
+    margin: 0 auto;
+    margin-top: 70px;
+
+    @include lg {
+      max-width: 380px;
+      margin: 0 auto;
+      width: 100%;
+      
+      
+    }
+  }
+
+
+  &__input {
+    width: 100%;
+    border-radius: 4px;
+    
+    
+  }
+
+  .search-bar__content {
+  display: flex;
+  justify-content: center;
+
+}
+
+  .search-bar__input {
+    @include lg {
+      @include text(17px);
+
+      padding-left: 0px;
+    }
+  }
+  
+
+
+}
+

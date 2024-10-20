@@ -1,0 +1,125 @@
+@import "src/assets/styles/_mixins.scss";
+
+.restaurants {
+    padding-left: 16px;
+    padding-right: 11px;
+    margin-top: 60px; 
+    min-height: calc(100vh - 202px);
+    
+
+    @include lg {
+      max-width: 1185px;
+      margin: 0 auto;
+      margin-top: 78px;
+      margin-bottom: 137px;
+      min-height: calc(100vh - 84px);
+    } 
+    
+  
+    &__title {
+      line-height: 24px;
+      letter-spacing: 1.92px;
+      margin-bottom: 20px;
+      
+      @include lg {
+        display: none;
+        margin-top: 48px;
+
+      }
+
+    }
+  
+    &__filter-bar {
+      line-height: 21.76px;
+      letter-spacing: 1.92px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      @include lg {
+        .filter-bar__button {
+          @include text(22px);
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+
+      }
+ 
+    }
+    
+   
+
+    &__grid {
+
+      display: grid;
+      grid-template-columns: 1fr;                                                                                         
+      gap: 24px;
+      justify-items: center;
+      padding-right: 5.72px;
+      
+
+      @include md {
+        grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+      }
+
+      @include xl{
+        grid-template-columns: repeat(3, minmax(335px, 1fr));
+      }
+                                                                                                                                                
+      a {
+        text-decoration: none;
+      }
+ 
+      .restaurantCard {
+        width: 379px;
+        height: 404.89px;
+        box-sizing: border-box;
+    
+        .restaurantImage {
+          height: 209px;
+          width: 379px;
+        }
+    
+        .restaurantInfo {
+          box-sizing: border-box;
+          width: 379px;
+          padding: 18px 20px
+        }
+    
+        .restaurantName {
+          display: flex;
+          justify-content: center;
+          @include text(40px);
+          line-height: 47px;
+          letter-spacing: 2.67px;
+        }
+    
+        .restaurantChef {
+          display: flex;
+          justify-content: center;
+          @include text(24px);
+          line-height: 30px;
+          letter-spacing: 1.97px;
+          
+        }
+    
+        .restaurantRating {
+          display: flex;
+          justify-content: center;
+          display: flex;
+          margin-top: 8px;
+    
+          .star {
+            color: $primary-orange;  
+            font-size: 40px;
+            margin-right: 4px;
+          }
+    
+          .star.empty {
+            color: $primary-orange;  
+          }
+        }
+      }
+    }
+  }
+    
+
