@@ -18,7 +18,7 @@
   }
 
   &__header {
-    padding: 18px 20px 0;
+    padding: 0 20px;
     text-align: center;
   }
 
@@ -45,7 +45,15 @@
     margin: 0 auto;
     background-color: $primary-white;
 
-    
+    @include lg {
+      height: 262px;
+      width: 342px;
+
+      &--empty {
+        height: auto;
+        width: auto;
+      }
+    }
   }
 
   &__empty {
@@ -53,22 +61,10 @@
     flex-direction: column;
     align-items: center;
     padding-top: 61px;
-
-    @include lg {
-      &:not(.cart-modal__empty) {
-        height: 262px;
-        width: 342px;
-
-      }
-     
-    }
-
     
     @include lg {
       justify-content: flex-start;
-      padding-top: 241px; 
-      // height: auto;
-      // width: auto;
+      padding-top: 241px;
     }
   }
   
@@ -89,12 +85,6 @@
     letter-spacing: 1.97px;
     text-align: center;
     width: 145px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    
-    
     
   }
 
@@ -228,6 +218,5 @@
     line-height: 9.77px;
   }
 }
-
 
 

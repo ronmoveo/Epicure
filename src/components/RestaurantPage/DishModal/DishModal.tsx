@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './DishModal.scss';
 import { DishModalProps } from '../../../interfaces';
 import { ADD_TO_BAG, CHANGES, QUANTITY } from '../../../utils/constants';
@@ -7,6 +7,20 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
     const [selectedSide, setSelectedSide] = useState(dish.sideDish[0]);
     const [selectedChanges, setSelectedChanges] = useState<string[]>([]);
     const [quantity, setQuantity] = useState(1);
+    const modalRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                onClose();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [onClose]);
 
     const handleSideChange = (side: string) => {
         setSelectedSide(side);
@@ -33,7 +47,7 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
 
     return (
         <div className="dish-modal">
-            <div className="dish-modal__content">
+            <div className="dish-modal__content" ref={modalRef}>
                 <div className="dish-modal__header">
                     <button className="dish-modal__close" onClick={onClose}>
                         <img src="/closeLogo.svg" alt="Close" />
