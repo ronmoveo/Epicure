@@ -4,11 +4,15 @@
     padding-left: 16px;
     padding-right: 11px;
     margin-top: 60px; 
+    min-height: calc(100vh - 202px);
+    
 
     @include lg {
       max-width: 1185px;
       margin: 0 auto;
       margin-top: 78px;
+      margin-bottom: 137px;
+      min-height: calc(100vh - 84px);
     } 
     
   

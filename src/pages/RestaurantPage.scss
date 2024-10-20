@@ -4,6 +4,10 @@
   max-width: 1184px;
   width: 100%;
   margin: 0 auto;
+  min-height: calc(100vh - 202px);
+  @include lg {
+    min-height: calc(100vh - 84px);
+  }
   &__header {
     margin-bottom: 29px;
   }

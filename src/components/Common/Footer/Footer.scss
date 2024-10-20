@@ -5,16 +5,18 @@
     position: relative;
     bottom: 0;
     width: 100%;
+    box-sizing: border-box;
     height: 202px;
     display: flex;
     align-items: center;
     padding-left: 19px;
-    margin-top: 32px;
+    padding-top: 32px;
 
     @include lg {
+      box-sizing: border-box;
       gap: 40px;
-      height: 105px;
-      margin: 0;
+      height: 84px;
+      padding: 0;
       justify-content: center; 
     }
   

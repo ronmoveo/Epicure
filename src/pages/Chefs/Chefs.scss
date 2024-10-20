@@ -3,6 +3,7 @@
 .chefs {
   padding: 0 20px;
   margin-top: 60px;
+  min-height: calc(100vh - 52px);
 
   @include md {
     padding: 0;
@@ -46,6 +47,7 @@
     grid-template-columns: 1fr;
     gap: 24px;
     justify-items: center;
+    
 
     @include md {
       grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
@@ -57,3 +59,4 @@
     }
   }
 }
+

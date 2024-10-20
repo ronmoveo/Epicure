@@ -44,11 +44,13 @@ const Restaurants: React.FC = () => {
           </Link>
         ))}
       </div>
-      <Pagination 
+      {restaurants.length > 0 && (
+        <Pagination 
         pageCount={pageCount} 
         onPageChange={handlePageChange} 
         currentPage={currentPage} 
-      />
+        />
+      )}
     </div>
   );
 };

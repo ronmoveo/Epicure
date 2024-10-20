@@ -103,10 +103,10 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
                             </button>
                         </div>
                     </div>
+                    <button className="dish-modal__add" onClick={handleAddToCart}>
+                        {ADD_TO_BAG}
+                    </button>
                 </div>
-                <button className="dish-modal__add" onClick={handleAddToCart}>
-                   {ADD_TO_BAG} 
-                </button>
             </div>
         </div>
     );

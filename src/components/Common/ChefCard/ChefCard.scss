@@ -4,6 +4,7 @@
   width: 100%;
   height: 337px;
   
+
   @include md {
     width: 335px;
     height: 360px;
@@ -19,14 +20,16 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    
 
     .chef-photo {
       width: 100%;
-      height: calc(100% - 78px); 
+      height: 100%; 
       object-fit: cover;
     }
 
     .chef-name-label {
+
       position: absolute;
       bottom: 0;
       left: 0;
@@ -39,6 +42,15 @@
       align-items: center;
       justify-content: center;
       width: 100%;
+
+      @include lg {
+        @include bold-text(40px);
+        line-height: 47px;
+        letter-spacing: 2.67px;
+
+      }
+
     }
   }
 }
+

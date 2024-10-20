@@ -9,9 +9,11 @@
   background-color: $primary-white;
   box-shadow: 2px 4px 10px 0px #AFAFAF40;
   flex-direction: column;
+  padding-top: 16px;
+
   
   @include lg {
-    margin-top: 17px;
+    padding-top: 27px;
     width: 497px;
     height: 586px;
 

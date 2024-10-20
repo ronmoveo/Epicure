@@ -18,6 +18,7 @@ const IsDesktopDishesHome: React.FC<IsDesktopDishesHomeProps> = ({ signatureDish
                 isDesktop
 
                 />
+                
             ) : (
                 <DishSwiper dishes={signatureDishes} />
 
