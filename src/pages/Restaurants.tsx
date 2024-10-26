@@ -8,6 +8,7 @@ import { handleFilterRestaurants } from '../components/RestaurantPage/restaurant
 import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import Pagination from '../components/Common/Pagination/Pagination';
+import { CloudCog } from 'lucide-react';
 
 const Restaurants: React.FC = () => {
   const filters = [ALL, NEW, MOST_POPULAR, OPEN_NOW];

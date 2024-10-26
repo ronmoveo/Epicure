@@ -20,6 +20,10 @@
     line-height: 24px;
     letter-spacing: 1.92px;
     margin-bottom: 20px;
+
+    @include md {
+      padding-left: 20px;
+    }
     
     @include lg {
       display: none;
@@ -47,11 +51,21 @@
     grid-template-columns: 1fr;
     gap: 24px;
     justify-items: center;
+    align-content: start;
     
 
     @include md {
       grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
       padding-right: 5.72px;
+      padding-left: 5.72px;
+      height: 1128px;
+      
+
+    }
+
+    @include lg {
+      height: 834px;
+
     }
 
     @include xl {

@@ -50,12 +50,12 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
     return (  
         <div className="dish-modal">
             <div className="dish-modal__content" ref={modalRef}>
-            {IsDesktopScreen ? (<div className="dish-modal__desktop">
+            {IsDesktopScreen ? (<div className="dish-modal__headerDesktop">
                     <button className="dish-modal__close" onClick={onClose}>
-                        <img src="/closeLogo.svg" alt="Close" />
+                        <img src="/closeLogoWhite.svg" alt="Close" />
                     </button>
                 </div>):
-                (<div className="dish-modal__header">
+                (<div className="dish-modal__headerMobile">
                     <button className="dish-modal__close" onClick={onClose}>
                         <img src="/closeLogo.svg" alt="Close" />
                     </button>

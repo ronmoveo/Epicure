@@ -29,6 +29,8 @@ export const MOST_VIEWED = "Most Viewd"
 
 export const CURRENCY_SYMBOL = "₪";
 export const SCREEN_XL_MIN = "1280";
+export const RATING_FILTER = 4;
+export const DATE_FILTER = "2022-01-01";
 
 
 export const BREAKFAST = "Breakfast";

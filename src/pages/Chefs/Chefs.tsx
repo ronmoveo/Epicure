@@ -27,7 +27,7 @@ const Chefs: React.FC = () => {
           return chefDate >= twoYearsAgo;
         });
       case MOST_VIEWED:
-        return [...mockChefs].sort((a, b) => b.view - a.view).slice(0, 3);
+        return  mockChefs.filter(chef => chef.view >= 5);
       default:
         return mockChefs;
     }

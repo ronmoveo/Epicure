@@ -22,7 +22,7 @@ export const mockDishes: Dish[] = [
     name: "Pad Ki Mao",
     isSignature: true,
     ingredients: ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili", "Brown Coconut", "Garlic"],
-    photo: "/PadKiMao.svg",
+    photo: "https://res.cloudinary.com/daml13oqh/image/upload/Yapan_qkpcui.svg",
     price: 88,
     icon: "spicy.svg",
     types: ["dinner", "lunch"],
@@ -138,7 +138,7 @@ export const mockDishes: Dish[] = [
       id: "r3",
       chef: "Yuval Ben Moshe",
       name: "Yapan",
-      rating: 3.5,
+      rating: 3,
       photo: "/Yapan.svg",
       openedDate: new Date("2020-11-12"),
       openingHours: [
@@ -282,7 +282,6 @@ export const mockDishes: Dish[] = [
     
   ];
   
-// add createAt and updateAt
   export const mockChefs: Chef[] = [
     {
       id: "c1",
