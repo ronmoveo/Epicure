@@ -15,7 +15,6 @@
   }
 
   .restaurantInfo {
-    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -34,4 +33,22 @@
       max-width: 100%; 
     }
   }
+
+
+  .restaurantRating {
+    display: flex;
+    gap: 4px;
+
+
+    .star {
+      color: $primary-orange;
+      font-size: 16px; 
+    }
+
+    .star.empty {
+      color: $primary-orange; 
+    }
+  }
+
+
 }

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { RoutePaths } from "./utils/enum";
 import Restaurants from "./pages/Restaurants";
 import RestaurantPage from "./pages/RestaurantPage";
+import Chefs from "./pages/Chefs/Chefs";
 
 const routes = createBrowserRouter([
   {
@@ -12,7 +13,9 @@ const routes = createBrowserRouter([
     children: [
       { path: RoutePaths.HOME, element: <Home /> }, 
       { path: RoutePaths.RESTAURANTS, element: <Restaurants /> },
-      { path: `${RoutePaths.RESTAURANT}/:id`, element: <RestaurantPage /> }, 
+      { path: `${RoutePaths.RESTAURANT}/:id`, element: <RestaurantPage /> },
+      { path: RoutePaths.CHEFS, element: <Chefs /> },
+
     ],
   },
 ]);

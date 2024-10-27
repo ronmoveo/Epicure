@@ -20,7 +20,7 @@
         border: 1px solid $primary-white;
         cursor: pointer;
         text-decoration: none;
-        color: $primary-color;
+        color: $primary-black;
         min-width: 40px;
         display: flex;
         justify-content: center;
@@ -30,8 +30,8 @@
   
       &.active a {
         background-color: $card-color;
-        color: $primary-color;
-        border-color: $primary-color;
+        color: $primary-black;
+        border-color: $primary-black;
       }
   
   

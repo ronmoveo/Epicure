@@ -11,12 +11,10 @@
   
   .dish-card__image{
     height: 152px;
-    //width: 245px;
   }
   
   .dish-card__info{
     height: 236px;
-    //max-width: 245px;
   }
   
   .dish-card__divider{
@@ -36,104 +34,3 @@
 
 
 
-
-// <div className="dish-card" >
-// <img 
-//   src={dish.photo} 
-//   alt={dish.name} 
-//   className="dish-card__image" 
-// />
-// <div className="dish-card__info">
-//   <h3 className="dish-card__name" onTouchMove = {stopSwiperScroll} >
-//     {dish.name}
-//   </h3>
-//   <p className="dish-card__ingredients">{dish.ingredients.join(", ")}</p>
-//   {dish.icon && <img src={dish.icon} alt="icon" className="dish-card__icon" />}
-
-//   <div className="dish-card__bottom-row">
-//     <p className="dish-card__price">₪{dish.price}</p>
-//     <div className="dish-card__divider"></div>
-//   </div>
-
-
-
-
-// imageWidth={245}
-// imageHeight={152}
-// cardHeight={388}
-
-// .dishContainer {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     padding: 0 20px;
-  
-//     .dishTitle {
-//       margin-top: 48px;
-//       // margin-left: -140px;
-//       @include text();
-//       letter-spacing: 1.25px;
-//       line-height: 21.47px;
-//       text-align: left;
-//     }
-  
-//     .dishCard {
-//       background-color: $card-color;
-//       width: 245px;
-//       height: 388px; 
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: flex-start;
-//       text-align: left;
-  
-//       img.dishImage {
-//         width: 245px;
-//         height: 152px;
-//         object-fit: cover;
-//       }
-  
-//       .dishInfo {
-//         padding: 0 16px 16px 16px; 
-//         display: flex;
-//         flex-direction: column;
-//         justify-content: space-between;
-  
-//         .dishName {
-//           @include bold-text();
-//           margin-bottom: 8px;
-//           margin-top: 16px;
-//           height: 29px;
-//           overflow-x:auto; 
-//           white-space: nowrap;
-//         }
-  
-//         .dishIngredients {
-//           @include body-text;
-//           width: 209px;
-//           height: 100px; 
-//           overflow-y: auto; 
-//           margin-bottom: 16px;
-//           margin-top: 0px;
-//         }
-  
-//         .dishIcon {
-//           width: 30px;
-//           height: 24px;
-//           margin-bottom: 4px;
-//         }
-  
-//         .dishPrice {
-//           @include bold-text(16px);
-//           letter-spacing: 1.97px;
-//           margin-top: 6px; 
-//           text-align: left; 
-//         }
-//       }
-//     }
-//   }
-  
-  // .swiper-slide {
-  //   width: auto;
-  //   max-width: 245px;
-  // }
-  

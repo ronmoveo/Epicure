@@ -21,8 +21,8 @@ export const mockDishes: Dish[] = [
     id: "1",
     name: "Pad Ki Mao",
     isSignature: true,
-    ingredients: ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili", "Brown Coconut", "Garlic", "Ginger", "Soy Sauce", "Fish Sauce", "Basil", "Cilantro", "Mint", "Lime Juice", "Sugar", "Pepper", "Salt", "Oil", "Water"],
-    photo: "/PadKiMao.svg",
+    ingredients: ["Shrimps", "Glass Noodles", "Kemiri Nuts", "Shallots", "Lemon Grass", "Magic Chili", "Brown Coconut", "Garlic"],
+    photo: "https://res.cloudinary.com/daml13oqh/image/upload/Yapan_qkpcui.svg",
     price: 88,
     icon: "spicy.svg",
     types: ["dinner", "lunch"],
@@ -34,11 +34,11 @@ export const mockDishes: Dish[] = [
     id: "2",
     name: "Garlic Butter Shrimp",
     isSignature: true,
-    ingredients: ["Shrimps", "Garlic", "Butter", "Parsley", "Lemon Juice", "Olive Oil", "Salt", "Pepper", "Paprika", "Thyme", "Rosemary", "Chili Flakes", "White Wine", "Shallots", "Lemon Zest", "Dill", "Chives", "Basil", "Oregano", "Bay Leaves"],
+    ingredients: ["Shrimps", "Garlic", "Butter", "Parsley", "Lemon Juice", "Olive Oil", "Salt", "Pepper"],
     photo: "/kab-kem.svg",
     price: 95,
     icon: "vegan.svg",
-    types: ["dinner"],
+    types: ["dinner", "breakfast"],
     sideDish: ["White bread", "Sticky rice"],
     changes: ["Without Peanuts", "Less spicy"],
     quantity: 1,
@@ -47,11 +47,11 @@ export const mockDishes: Dish[] = [
     id: "3",
     name: "Tom Yum Soup",
     isSignature: true,
-    ingredients: ["Shrimps", "Lemongrass", "Galangal", "Kaffir Lime Leaves", "Chili", "Lime Juice", "Fish Sauce", "Tomatoes", "Mushrooms", "Cilantro", "Garlic", "Shallots", "Coconut Milk", "Chicken Stock", "Sugar", "Salt", "Pepper", "Oil", "Water", "Green Onions"],
+    ingredients: ["Shrimps", "Lemongrass", "Galangal", "Kaffir Lime Leaves", "Chili", "Lime Juice",],
     photo: "/tomYumSoup.jpg",
     price: 86,
     icon: "vegitarian.svg",
-    types: ["lunch"],
+    types: ["lunch", "dinner"],
     sideDish: ["White bread", "Sticky rice"],
     changes: ["Without Peanuts", "Less spicy"],
     quantity: 1,
@@ -60,7 +60,7 @@ export const mockDishes: Dish[] = [
     id: "4",
     name: "Sashimi",
     isSignature: true,
-    ingredients: ["Tuna", "Salmon", "Yellowtail", "Wasabi", "Japanese Soy Sauce", "Pickled Ginger", "Radish", "Cucumber", "Avocado", "Seaweed", "Sesame Seeds", "Lemon", "Lime", "Chili", "Garlic", "Ginger", "Green Onions", "Shiso Leaves", "Nori", "Rice Vinegar"],
+    ingredients: ["Tuna", "Salmon", "Yellowtail", "Wasabi", "Japanese Soy Sauce", "Pickled Ginger"],
     photo: "/Yapan.svg",
     price: 74,
     icon: "vegan.svg",
@@ -73,11 +73,11 @@ export const mockDishes: Dish[] = [
     id: "5",
     name: "Japanese wagyu grass fed  picanha with goat herb butter with steam green vegetables",
     isSignature: false,
-    ingredients: ["Wagyu Beef", "Goat Herb Butter", "Green Vegetables", "Garlic", "Thyme", "Rosemary", "Salt", "Pepper", "Olive Oil", "Soy Sauce", "Mirin", "Sake", "Sugar", "Ginger", "Scallions", "Sesame Oil", "Chili", "Lime", "Lemongrass", "Galangal"],
+    ingredients: ["Wagyu Beef", "Goat Herb Butter", "Green Vegetables", "Garlic", "Thyme", "Rosemary", "Salt", "Pepper"],
     photo: "/KitchenMarket.jpeg",
     price: 69,
     icon: "spicy.svg",
-    types: ["breakfast"],
+    types: ["breakfast", "dinner"],
     sideDish: ["White bread", "Sticky rice"],
     changes: ["Without Peanuts", "Less spicy"],
     quantity: 1,
@@ -86,7 +86,7 @@ export const mockDishes: Dish[] = [
     id: "6",
     name: "Sushi Sushi Sushi Sushi Sushi Sushi Sushi Sushi Sushi Sushi Sushi Sushi",
     isSignature: true,
-    ingredients: ["Sushi Rice", "Nori", "Shrimps", "Tuna", "Salmon", "Avocado", "Cucumber", "Pickled Radish", "Wasabi", "Soy Sauce", "Ginger", "Sesame Seeds", "Crab Meat", "Scallions", "Cream Cheese", "Tempura Flakes", "Spicy Mayo", "Eel Sauce", "Tobiko", "Chili"],
+    ingredients: ["Sushi Rice", "Nori", "Shrimps", "Tuna", "Salmon", "Avocado", "Cucumber", "Pickled Radish"],
     photo: "/sushi.jpg",
     price: 78,
     icon: "spicy.svg",
@@ -95,7 +95,7 @@ export const mockDishes: Dish[] = [
     changes: ["Without Peanuts", "Less spicy"],
     quantity: 1,
   },
-  ];
+];
   
   export const mockRestaurants: Restaurant[] = [
     {
@@ -138,7 +138,7 @@ export const mockDishes: Dish[] = [
       id: "r3",
       chef: "Yuval Ben Moshe",
       name: "Yapan",
-      rating: 3.5,
+      rating: 3,
       photo: "/Yapan.svg",
       openedDate: new Date("2020-11-12"),
       openingHours: [
@@ -282,15 +282,16 @@ export const mockDishes: Dish[] = [
     
   ];
   
-
   export const mockChefs: Chef[] = [
     {
       id: "c1",
-      name: "Ran Shmueli",
+      name: "Asaf Granit",
       restaurants: [mockRestaurants[0]],
       photo: "PadKiMao.svg",
       about: "am",
-
+      createAt: "21/03/2024",
+      updateAt: "21/03/2024",
+      view: 10,
     },
     {
       id: "c2",
@@ -298,6 +299,9 @@ export const mockDishes: Dish[] = [
       restaurants: [mockRestaurants[0]],
       photo: "PadKiMao.svg",
       about: "am",
+      createAt: "21/03/2024",
+      updateAt: "21/03/2021",
+      view: 1,
     },
     {
       id: "c3",
@@ -305,13 +309,52 @@ export const mockDishes: Dish[] = [
       restaurants: [mockRestaurants[6],mockRestaurants[7],mockRestaurants[9]],
       photo: "yosi.svg",
       about: "Chef Yossi Shitrit has been living and breathing his culinary dreams for more than two decades, including running the kitchen in his first restaurant, the fondly-remembered Violet, located in Moshav  Udim. Shitrit's creativity and culinary  acumen born of long experience  are expressed in the every detail of each and every dish.",
+      createAt: "21/03/2024",
+      updateAt: "21/03/2022",
+      view: 12,
     },
     {
       id: "c4",
-      name: "aa",
+      name: "Aviv Moshe",
       restaurants: [mockRestaurants[0]],
       photo: "PadKiMao.svg",
       about: "am",
+      createAt: "21/03/2020",
+      updateAt: "21/03/2020",
+      view: 2,
+    },
+    {
+      id: "c5",
+      name: "Eyal Shani",
+      restaurants: [mockRestaurants[0]],
+      photo: "PadKiMao.svg",
+      about: "am",
+      createAt: "21/03/2020",
+      updateAt: "21/03/2020",
+      view: 3,
+
+    },
+    {
+      id: "c6",
+      name: "Meir Adoni",
+      restaurants: [mockRestaurants[0]],
+      photo: "PadKiMao.svg",
+      about: "am",
+      createAt: "21/03/2020",
+      updateAt: "21/03/2020",
+      view: 4,
+
+    },
+    {
+      id: "c4",
+      name: "Omer Miller",
+      restaurants: [mockRestaurants[0]],
+      photo: "PadKiMao.svg",
+      about: "am",
+      createAt: "21/03/2020",
+      updateAt: "21/03/2020",
+      view: 1,
+
     },
   ];
 

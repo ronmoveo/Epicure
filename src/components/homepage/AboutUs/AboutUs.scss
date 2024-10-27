@@ -7,12 +7,60 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  @include lg {
+    @include text(30px);
+    padding: 0;
+    padding-bottom: 40px;
+    align-items: center;
+  }
 
+  .Wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include lg {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      max-width: 1440px;
+      
+    
+    }
+  }
 
+  .Content {
+    @include lg {
+    display: flex;
+    flex-direction: column;
+    width: 917.78px;
+    margin-right: 83.22px;
+      .DownloadLogos {
+        order:2;
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      .AboutUsParagraph {
+        max-width: 569px;
+        width: 100%;
+  
+      }
+      
+    }
+  
+    
+  }
 
   .Logo {
     width: 102px;
     height: 95px;
     margin-bottom: 20px;
+    @include lg {
+      order: 2;
+      width: 178.22px;
+      height: 166px;
+      margin-bottom: 0;
+    }
   }
 }

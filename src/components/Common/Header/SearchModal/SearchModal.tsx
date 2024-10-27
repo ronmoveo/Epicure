@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './SearchModal.scss';
 import SearchBar from '../../SearchBar/SearchBar';
 import { SEARCH, SEARCH_FOR_RESTAURANT_CUISINE_CHEF } from '../../../../utils/constants';
 
 const SearchModal: React.FC = () => {
-  
+  const modalRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <>
@@ -18,7 +35,7 @@ const SearchModal: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="search-modal">
+        <div className="search-modal" ref={modalRef}>
           <div className="search-modal__header">
             <button className="search-modal__close" onClick={toggleModal}>
               <img src="/closeLogo.svg" alt="Close" />

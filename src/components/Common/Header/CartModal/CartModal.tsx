@@ -1,19 +1,40 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './CartModal.scss';
 import { useCart } from '../../../../cartContext';
-import { CHECKOUT, CURRENCY_SYMBOL, MY_ORDER, TOTAL, YOUR_BAG_IS_EMPTY } from '../../../../utils/constants';
+import { CHECKOUT, CURRENCY_SYMBOL, MY_ORDER, ORDER_HISTORY, TOTAL, YOUR_BAG_IS_EMPTY } from '../../../../utils/constants';
 
 const CartModal: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { cartItems, cartCount } = useCart();
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const toggleModal = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleClickOutside = (event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
   const calculateTotal = () => {
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
+
+  
 
   return (
     <>
@@ -23,7 +44,7 @@ const CartModal: React.FC = () => {
       </button>
 
       {isOpen && (
-        <div className="cart-modal">
+        <div className="cart-modal" ref={modalRef}>
           <div className="cart-modal__header">
             {cartItems.length > 0 && (
               <>
@@ -32,7 +53,7 @@ const CartModal: React.FC = () => {
               </>
             )}
           </div>
-          <div className="cart-modal__items-container">
+          <div className={`cart-modal__items-container ${cartItems.length === 0 ? 'cart-modal__items-container--empty' : ''}`}>
             {cartItems.length === 0 ? (
               <div className="cart-modal__empty">
                 <div className="cart-modal__image-wrapper">
@@ -41,6 +62,9 @@ const CartModal: React.FC = () => {
                 <p className="cart-modal__text">
                   {YOUR_BAG_IS_EMPTY}
                 </p>
+                <button className="cart-modal__history">
+                {ORDER_HISTORY}
+                </button>
               </div>
             ) : (
               <div className="cart-modal__items">
@@ -85,3 +109,7 @@ const CartModal: React.FC = () => {
 };
 
 export default CartModal;
+function handleClickOutside(this: Document, ev: MouseEvent) {
+  throw new Error('Function not implemented.');
+}
+

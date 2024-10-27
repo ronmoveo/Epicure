@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './DishModal.scss';
 import { DishModalProps } from '../../../interfaces';
-import { ADD_TO_BAG, CHANGES, QUANTITY } from '../../../utils/constants';
+import { ADD_TO_BAG, CHANGES, CURRENCY_SYMBOL, QUANTITY } from '../../../utils/constants';
+import useIsDesktop from '../../Common/useIsDesktop';
 
 const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => {
+    const IsDesktopScreen = useIsDesktop( {screenWidth: 1024 });
     const [selectedSide, setSelectedSide] = useState(dish.sideDish[0]);
     const [selectedChanges, setSelectedChanges] = useState<string[]>([]);
     const [quantity, setQuantity] = useState(1);
+    const modalRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+                onClose();
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [onClose]);
 
     const handleSideChange = (side: string) => {
         setSelectedSide(side);
@@ -31,14 +47,20 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
         onClose();
     };
 
-    return (
+    return (  
         <div className="dish-modal">
-            <div className="dish-modal__content">
-                <div className="dish-modal__header">
+            <div className="dish-modal__content" ref={modalRef}>
+            {IsDesktopScreen ? (<div className="dish-modal__headerDesktop">
+                    <button className="dish-modal__close" onClick={onClose}>
+                        <img src="/closeLogoWhite.svg" alt="Close" />
+                    </button>
+                </div>):
+                (<div className="dish-modal__headerMobile">
                     <button className="dish-modal__close" onClick={onClose}>
                         <img src="/closeLogo.svg" alt="Close" />
                     </button>
-                </div>
+                </div>)}
+                
                 <div className="dish-modal__image-container">
                     <img src={dish.photo} alt={dish.name} className="dish-modal__image" />
                 </div>
@@ -47,6 +69,16 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
                     <div className="dish-modal__ingredients-container">
                         <p className="dish-modal__ingredients">{dish.ingredients.join(', ')}</p>
                     </div>
+                    {IsDesktopScreen && dish.icon && (
+                        <img src={`/${dish.icon}`} alt="icon" className="dish-modal__icon" />
+                    )}
+                    {IsDesktopScreen  && (
+                        <div className="dish-modal__price-container">
+                        <div className="dish-modal__separator"></div>
+                        <span className="dish-modal__price">{CURRENCY_SYMBOL}{dish.price} </span>
+                        <div className="dish-modal__separator"></div>
+                        </div>
+                    )}
                     <div className="dish-modal__section">
                         <h3>Choose a side</h3>
                         <div className="dish-modal__options">
@@ -89,10 +121,10 @@ const DishModal: React.FC<DishModalProps> = ({ dish, onClose, onAddToCart }) => 
                             </button>
                         </div>
                     </div>
+                    <button className="dish-modal__add" onClick={handleAddToCart}>
+                        {ADD_TO_BAG}
+                    </button>
                 </div>
-                <button className="dish-modal__add" onClick={handleAddToCart}>
-                   {ADD_TO_BAG} 
-                </button>
             </div>
         </div>
     );

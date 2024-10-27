@@ -28,6 +28,7 @@ export interface Dish {
     openedDate: Date;
     openingHours: OpeningHours[]; // Array of opening hours for each day
     dishes: Dish[];
+
   }
 
 export interface Chef {
@@ -36,6 +37,9 @@ export interface Chef {
   restaurants: Restaurant[];
   photo: string;
   about: string;
+  createAt: string;
+  updateAt: string;
+  view: number;
 }
 
 export interface  DishSwiperProps {
@@ -72,6 +76,7 @@ export interface CommonSwiperProps {
 export interface RestaurantCardProps {
   restaurant: Restaurant;
   showChef?: boolean;
+  isStars?: boolean;
 }
 
 export interface SearchBarProps {
@@ -122,4 +127,38 @@ export interface PaginationProps {
   pageCount: number;
   onPageChange: (selectedItem: { selected: number }) => void;
   currentPage: number;  
+}
+
+export interface useIsDesktopProps {
+  screenWidth?: number;
+}
+
+export interface RestaurantsHomeDesktopProps {
+  restaurants: Restaurant[];
+  title: string;
+  allLink?: string;
+  showChef?: boolean;
+  isStars?: boolean;
+}
+
+export interface IsDesktopRestaurantsHomeProps {
+  restaurants: Restaurant[];
+  title1: string;
+  title2?: string;
+  allLink?: string;
+  showChef?: boolean;
+  isStars?: boolean;
+}
+
+
+export interface IsDesktopDishesHomeProps {
+  signatureDishes: Dish[];
+  title: string;
+
+}
+
+export interface DishesHomeDesktopProps {
+  dishes: Dish[];
+  title: string;
+  isDesktop?: boolean;
 }

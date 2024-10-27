@@ -1,5 +1,5 @@
 import { Restaurant } from "../../interfaces";
-import { ALL, MOST_POPULAR, NEW, OPEN_NOW } from "../../utils/constants";
+import { ALL, DATE_FILTER, MOST_POPULAR, NEW, OPEN_NOW, RATING_FILTER } from "../../utils/constants";
 
 export const filterOpenNow = (restaurants: Restaurant[]): Restaurant[] => {
   const now = new Date();
@@ -13,13 +13,11 @@ export const filterOpenNow = (restaurants: Restaurant[]): Restaurant[] => {
 };
 
 export const filterMostPopular = (restaurants: Restaurant[]): Restaurant[] => {
-  return restaurants
-    .sort((a, b) => b.rating - a.rating)
+  return  restaurants.filter(restaurant => restaurant.rating >= RATING_FILTER);
 };
 
 export const filterNewRestaurants = (restaurants: Restaurant[]): Restaurant[] => {
-  return restaurants
-    .sort((a, b) => new Date(b.openedDate).getTime() - new Date(a.openedDate).getTime())
+  return restaurants.filter(restaurant => new Date(restaurant.openedDate) >= new Date(DATE_FILTER));
 
 };
 

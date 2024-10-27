@@ -4,17 +4,31 @@
 .AboutUsText{
   @include text();
   letter-spacing: 1.25px;
+  line-height: 28px;
 
 
   h2 {
-    margin-top: 20px;
+    margin-top: 48px;
     line-height: 35px;
+    margin-bottom: 16px;
+    @include lg {
+      @include text (30px);
+      letter-spacing: 2.14px;
+      margin-top: 40px;
+    }
   }
 
   p {
+    line-height: 30px;
+    letter-spacing: 2.14px;
+    @include lg {
+      @include text(20px);
 
-    margin-top: 10px;
-    line-height: 28px;
+      &.AboutUsParagraph { 
+        margin-bottom: 20px; 
+    }
+    }
+    
   }
 }
 

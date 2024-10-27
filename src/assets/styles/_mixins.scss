@@ -27,7 +27,7 @@
 @mixin text($size: 18px) {
   font-family: $primary-font;                               
   font-weight: $primary-weight;
-  color: $primary-color;
+  color: $primary-black;
   font-size: $size;
   font-weight: 200;
 
@@ -35,13 +35,13 @@
 
 @mixin bold-text($size: 18px) {
   font-family: $primary-font;                               
-  color: $primary-color;
+  color: $primary-black;
   font-size: $size;
   font-weight: 400;
 }
 
 @mixin body-text($size: 16px) {
-  color: $primary-color;
+  color: $primary-black;
   font-family: $primary-font;
   font-weight: $primary-weight;
   font-size: $size;

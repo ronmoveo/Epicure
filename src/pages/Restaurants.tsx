@@ -8,6 +8,7 @@ import { handleFilterRestaurants } from '../components/RestaurantPage/restaurant
 import { ALL, MOST_POPULAR, NEW, OPEN_NOW, RESTAURANTS } from '../utils/constants';
 import { Link } from 'react-router-dom';
 import Pagination from '../components/Common/Pagination/Pagination';
+import { CloudCog } from 'lucide-react';
 
 const Restaurants: React.FC = () => {
   const filters = [ALL, NEW, MOST_POPULAR, OPEN_NOW];
@@ -40,15 +41,17 @@ const Restaurants: React.FC = () => {
       <div className="restaurants__grid">
         {paginatedRestaurants.map((restaurant) => (
           <Link key={restaurant.id} to={`/restaurants/${restaurant.id}`}>
-            <RestaurantCard restaurant={restaurant} showChef={true} />
+            <RestaurantCard restaurant={restaurant} showChef={true} isStars />
           </Link>
         ))}
       </div>
-      <Pagination 
+      {restaurants.length > 0 && (
+        <Pagination 
         pageCount={pageCount} 
         onPageChange={handlePageChange} 
         currentPage={currentPage} 
-      />
+        />
+      )}
     </div>
   );
 };
