@@ -1,0 +1,61 @@
+@import "src/assets/styles/_mixins.scss";
+.search-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+  height: 413px;
+  padding-top: 13px;
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 37px;
+    position: relative;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    position: absolute;
+    left: 0;
+    margin-left: 24.5px;
+  }
+
+  &__title {
+    @include text(18px);
+    justify-content: left;
+    line-height: 21.76px;
+    letter-spacing: 1.9px;
+    text-align: left;
+    margin-top: 0px; //want to remove
+  }
+
+  &__search{
+    width: 100%;
+    max-width: 315px;
+    margin: 0 auto;
+    
+  }
+
+  &__spacer {
+    width: 24px;
+    
+  }
+
+  &__input-wrapper {
+    position: relative;
+    
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 4px;
+    
+  }
+}

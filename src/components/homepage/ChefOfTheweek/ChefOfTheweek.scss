@@ -1,0 +1,31 @@
+@import "src/assets/styles/_mixins.scss";
+
+.chef-of-the-week {
+  .section-title {
+    @include text;
+    font-size: 18px;
+    line-height: 35px;
+    letter-spacing: 1.25px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 48px;
+    text-transform: uppercase;
+  }
+
+  .chef-info {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .chef-about {
+    @include text;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1.25px;
+    text-align: justify;
+    margin-bottom: 12px;
+    padding: 0 20px;
+  }
+
+
+}

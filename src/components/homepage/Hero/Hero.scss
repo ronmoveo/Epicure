@@ -1,16 +1,17 @@
-@import '../assets/styles/mixins';
+@import "src/assets/styles/_mixins.scss";
 
 .hero {
   background-image: url('/hero.svg');
   background-size: cover;
   background-position: center;
   height: 273px; 
-  width: 375px; 
+  width: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   margin-top: 46px;
+
 
   &__content {
     background-color: #FFFFFFE0; 
@@ -25,12 +26,12 @@
   }
 
   &__title {
-    @include text;
-    font-size: 24px;
+    @include text(24px);
     line-height: 32px;
     letter-spacing: 1.97px;
     text-align: center;
     margin-bottom: 18px;
+    margin-top: 16px;
     
   }
 
@@ -38,7 +39,7 @@
     position: relative;
 
     input {
-      @include text;
+      @include text(12px);
       background-color: transparent;
       justify-content: center;
       display: flex;
